@@ -5,6 +5,9 @@ I have no idea what I'm doing whoo
 - Elite Dangerous bindings
 - Joystick GremlinEX config
 - VPC software config
+- 2 vJoy Devices (8/32/0)(8/16/0)
+
+- Expects HidHide 
 
 Hardware:
 - VPC Alpha Prime R
