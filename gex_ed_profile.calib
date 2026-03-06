@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <!--VJoy 8/32/1 (1) axis 1-->
+  <calibration device-guid="a220dbb0077011f18010444553540000" input-id="1" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--VJoy 8/32/1 (1) axis 2-->
+  <calibration device-guid="a220dbb0077011f18010444553540000" input-id="2" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--VJoy 8/32/1 (1) axis 3-->
+  <calibration device-guid="a220dbb0077011f18010444553540000" input-id="3" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--VJoy 8/32/1 (1) axis 4-->
+  <calibration device-guid="a220dbb0077011f18010444553540000" input-id="4" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--VJoy 8/32/1 (1) axis 5-->
+  <calibration device-guid="a220dbb0077011f18010444553540000" input-id="5" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--VJoy 8/32/1 (1) axis 6-->
+  <calibration device-guid="a220dbb0077011f18010444553540000" input-id="6" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--VJoy 8/32/1 (1) axis 7-->
+  <calibration device-guid="a220dbb0077011f18010444553540000" input-id="7" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--VJoy 8/32/1 (1) axis 8-->
+  <calibration device-guid="a220dbb0077011f18010444553540000" input-id="8" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--VPC VMAX Prime Throttle axis 4-->
+  <calibration device-guid="702d2f9006db11f18009444553540000" input-id="4" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="0.96000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--VPC VMAX Prime Throttle axis 5-->
+  <calibration device-guid="702d2f9006db11f18009444553540000" input-id="5" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--VPC VMAX Prime Throttle axis 6-->
+  <calibration device-guid="702d2f9006db11f18009444553540000" input-id="6" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--VPC VMAX Prime Throttle axis 7-->
+  <calibration device-guid="702d2f9006db11f18009444553540000" input-id="7" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--VPC VMAX Prime Throttle axis 1-->
+  <calibration device-guid="702d2f9006db11f18009444553540000" input-id="1" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--VPC VMAX Prime Throttle axis 2-->
+  <calibration device-guid="702d2f9006db11f18009444553540000" input-id="2" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--VPC VMAX Prime Throttle axis 8-->
+  <calibration device-guid="702d2f9006db11f18009444553540000" input-id="8" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--RIGHT VPC Stick MT-50CM3 axis 1-->
+  <calibration device-guid="0000284006df11f1800d444553540000" input-id="1" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="-0.02000000" deadzone-center-max="0.02000000"/>
+  <!--RIGHT VPC Stick MT-50CM3 axis 2-->
+  <calibration device-guid="0000284006df11f1800d444553540000" input-id="2" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.02000000" deadzone-center-max="0.02000000"/>
+  <!--RIGHT VPC Stick MT-50CM3 axis 4-->
+  <calibration device-guid="0000284006df11f1800d444553540000" input-id="4" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--RIGHT VPC Stick MT-50CM3 axis 5-->
+  <calibration device-guid="0000284006df11f1800d444553540000" input-id="5" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--RIGHT VPC Stick MT-50CM3 axis 7-->
+  <calibration device-guid="0000284006df11f1800d444553540000" input-id="7" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--T-Pendular-Rudder axis 1-->
+  <calibration device-guid="9ff2d4b00f0511f08003444553540000" input-id="1" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--T-Pendular-Rudder axis 2-->
+  <calibration device-guid="9ff2d4b00f0511f08003444553540000" input-id="2" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+  <!--T-Pendular-Rudder axis 3-->
+  <calibration device-guid="9ff2d4b00f0511f08003444553540000" input-id="3" inverted="False" centered="True" calibrate-min="-1.00000000" calibrate-max="1.00000000" deadzone-min="-1.00000000" deadzone-max="1.00000000" threshold-value="0.00200000" threshold-enabled="False" calibrate-center="0.00000000" deadzone-center-min="0.00000000" deadzone-center-max="0.00000000"/>
+</root>
