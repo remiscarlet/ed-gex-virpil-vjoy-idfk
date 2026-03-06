@@ -467,31 +467,25 @@
           </container>
         </button>
         <button id="35" description="Landing Gear">
-          <container type="basic" container_id="3d893dbb74a3419fa48416326b0ade38" collapsed="False">
+          <container type="basic" container_id="cce659a79d5145c8a0c3fed8ab9b389e" collapsed="False">
             <action-set>
-              <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="5d631f954d6d436ebd915f028c152c13" priority="5">
-                <!--virtual: L 0x4c/76 scan code: 0x26/38 extended: False-->
-                <key virtual-code="76" scan-code="38" extended="False" description="L"/>
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
-                  <client client-name="Any" selected="True"/>
-                </remote-config>
-              </map-to-keyboard-ex>
+              <map_to_state key="is_landing_gear_down" state-id="8aa30d6bf72042b5a1c6fe1db5ac8b19" mode="toggle" delay="250" exec_on_press="True" exec_on_release="False" sync-mode="0" default-reset="True" randomize-mode="False" randomize-weight="0.50000000" action_id="9782cb988d904626b18287f0e6f84c8e" priority="5">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map_to_state>
             </action-set>
-            <activation-condition rule="all" condition_id="d41f54afb25045788606f114a5f5dc92"/>
+            <activation-condition rule="all" condition_id="d1ec0ca13dd24aeebc5051ec4be17551"/>
           </container>
         </button>
         <button id="37" description="Cargo Scoop">
-          <container type="basic" container_id="727c33a1fcf24b9da131c6de5ab3b272" collapsed="False">
+          <container type="basic" container_id="7639d94ed38d4cd9affe8f8fa96aec0e" collapsed="False">
             <action-set>
-              <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="2d01fe68eb1f47f0aa5e0f7103d21a3b" priority="5">
-                <!--virtual: Home 0x24/36 scan code: 0x47/71 extended: True-->
-                <key virtual-code="36" scan-code="71" extended="True" description="Home"/>
+              <map_to_state key="is_cargo_scoop_down" state-id="550d0f09578f44458ef8469a0d0d1938" mode="toggle" delay="250" exec_on_press="True" exec_on_release="False" sync-mode="0" default-reset="True" randomize-mode="False" randomize-weight="0.50000000" action_id="31713d43c2c44887afc3749cc16d1395" priority="5">
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
                   <client client-name="Any" selected="True"/>
                 </remote-config>
-              </map-to-keyboard-ex>
+              </map_to_state>
             </action-set>
-            <activation-condition rule="all" condition_id="5c63ba0f704b4018ab68438b38d9eeae"/>
+            <activation-condition rule="all" condition_id="f8ebd4d243aa41ea84f4ac95153c51fb"/>
           </container>
         </button>
         <button id="39">
@@ -963,7 +957,76 @@
         <activation-condition rule="all" condition_id="e83ca6cb2b9e49f68b4e585eae206371"/>
       </container>
     </state>
-    <state id="702a148e4f644ef8988bc6b5e37681a0" key="throttle_curve_full_fwd" value="False" type="bool" category_id="5e54b523700c4a5996bfea85ce1ea75e" is_expression="False" autorelease="False" autorelease-delay="1.00000000" autorelease-mode="toggle" autorelease-trigger="on"/>
+    <state id="550d0f09578f44458ef8469a0d0d1938" key="is_cargo_scoop_down" value="False" type="bool" category_id="5e54b523700c4a5996bfea85ce1ea75e" is_expression="False" autorelease="False" autorelease-delay="1.00000000" autorelease-mode="toggle" autorelease-trigger="on">
+      <container type="basic" container_id="caaee3d638034fbbb099a250526adc95" comment="Send Keypress" collapsed="True">
+        <action-set>
+          <map-to-keyboard-ex mode="pulse" delay="49" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="True" wheel-factor="1" action_id="8168c7e931874cc396c7a288ead9036f" priority="5">
+            <!--virtual: Home 0x24/36 scan code: 0x47/71 extended: True-->
+            <key virtual-code="36" scan-code="71" extended="True" description="Home"/>
+            <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+              <client client-name="Any" selected="True"/>
+            </remote-config>
+          </map-to-keyboard-ex>
+        </action-set>
+        <activation-condition rule="all" condition_id="c4e0fa9fc8ac433eb303952503cc1edf"/>
+      </container>
+      <container type="basic" container_id="658684e632574d72a215f76390578d51" comment="Send LED Updates" collapsed="False">
+        <action-set>
+          <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;0196&#10;13&#10;FF&#10;00&#10;00" line_per_arg="True" exec_on_release="False" action_id="26e413ce9c5d496e8270916d95fcfad8" comment="RED LED" priority="5">
+            <activation-condition rule="all" condition_id="cde35d67a7a24e0a900219254a30697f">
+              <condition condition_id="71411a62efa54f1b8f46a8f8d198041a" delay="0.00000000" comparison="pressed" condition-type="state" key="is_cargo_scoop_down" ignore-release="False"/>
+            </activation-condition>
+            <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+              <client client-name="Any" selected="True"/>
+            </remote-config>
+          </run-process>
+          <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;0196&#10;13&#10;00&#10;FF&#10;11" line_per_arg="True" exec_on_release="True" action_id="7d5a05e0c6f24c71b509fb3903c2438d" comment="GREEN LED" priority="4">
+            <activation-condition rule="all" condition_id="bccac7f2bc884bf89cad2dc4e5b9e945">
+              <condition condition_id="b10c01c025564d97901ce2a1a4cb746c" delay="0.00000000" comparison="released" condition-type="state" key="is_cargo_scoop_down" ignore-release="False"/>
+            </activation-condition>
+            <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+              <client client-name="Any" selected="True"/>
+            </remote-config>
+          </run-process>
+        </action-set>
+        <activation-condition rule="all" condition_id="35b02a74adf642f8bcd08fb692a97190"/>
+      </container>
+    </state>
+    <state id="8aa30d6bf72042b5a1c6fe1db5ac8b19" key="is_landing_gear_down" value="False" type="bool" category_id="5e54b523700c4a5996bfea85ce1ea75e" is_expression="False" autorelease="False" autorelease-delay="1.00000000" autorelease-mode="toggle" autorelease-trigger="on">
+      <container type="basic" container_id="7d423b2dbb0845abba80e564bf04000a" collapsed="True">
+        <action-set>
+          <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="True" wheel-factor="1" action_id="a50a1920701d405d9df299524f5cc400" priority="5">
+            <!--virtual: L 0x4c/76 scan code: 0x26/38 extended: False-->
+            <key virtual-code="76" scan-code="38" extended="False" description="L"/>
+            <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+              <client client-name="Any" selected="True"/>
+            </remote-config>
+          </map-to-keyboard-ex>
+        </action-set>
+        <activation-condition rule="all" condition_id="05f0d4d285cc4ea89e8e1027fdbca3e9"/>
+      </container>
+      <container type="basic" container_id="48e646c2e2504e59adede975a2713bb0" comment="Send LED Updates" collapsed="False">
+        <action-set>
+          <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;0196&#10;12&#10;FF&#10;00&#10;00" line_per_arg="True" exec_on_release="False" action_id="717fdc597d504c8f840d65e7cfd030d4" comment="RED LED" priority="5">
+            <activation-condition rule="all" condition_id="cde35d67a7a24e0a900219254a30697f">
+              <condition condition_id="71411a62efa54f1b8f46a8f8d198041a" delay="0.00000000" comparison="pressed" condition-type="state" key="is_landing_gear_down" ignore-release="False"/>
+            </activation-condition>
+            <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+              <client client-name="Any" selected="True"/>
+            </remote-config>
+          </run-process>
+          <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;0196&#10;12&#10;00&#10;FF&#10;11" line_per_arg="True" exec_on_release="True" action_id="b99c3a49e87a45eba1c72ebbd0e60dcb" comment="GREEN LED" priority="4">
+            <activation-condition rule="all" condition_id="bccac7f2bc884bf89cad2dc4e5b9e945">
+              <condition condition_id="b10c01c025564d97901ce2a1a4cb746c" delay="0.00000000" comparison="released" condition-type="state" key="is_landing_gear_down" ignore-release="False"/>
+            </activation-condition>
+            <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+              <client client-name="Any" selected="True"/>
+            </remote-config>
+          </run-process>
+        </action-set>
+        <activation-condition rule="all" condition_id="81c33bafb92f4810afb2871d35f5878a"/>
+      </container>
+    </state>
     <categories>
       <category name="default" id="5e54b523700c4a5996bfea85ce1ea75e"/>
     </categories>
