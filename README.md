@@ -15,3 +15,7 @@ Hardware:
 - TM TPR 
 
 Something something inspired by Aussiedroid.
+
+### Disclaimer
+
+This project is NOT intended for plug-n-play distribution. Use/copy/etc at your own risk.

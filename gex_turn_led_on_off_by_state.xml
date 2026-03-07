@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<container_template>
+  <container type="basic" container_id="658684e632574d72a215f76390578d51" comment="Send LED Updates" collapsed="False">
+    <action-set>
+      <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;0196&#10;13&#10;FF&#10;00&#10;00" line_per_arg="True" exec_on_release="False" action_id="26e413ce9c5d496e8270916d95fcfad8" comment="RED LED" priority="5">
+        <activation-condition rule="all" condition_id="cde35d67a7a24e0a900219254a30697f">
+          <condition condition_id="71411a62efa54f1b8f46a8f8d198041a" delay="0.00000000" comparison="pressed" condition-type="state" key="is_cargo_scoop_down" ignore-release="False"/>
+        </activation-condition>
+        <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+          <client client-name="Any" selected="True"/>
+        </remote-config>
+      </run-process>
+      <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;0196&#10;13&#10;00&#10;FF&#10;11" line_per_arg="True" exec_on_release="True" action_id="7d5a05e0c6f24c71b509fb3903c2438d" comment="GREEN LED" priority="4">
+        <activation-condition rule="all" condition_id="bccac7f2bc884bf89cad2dc4e5b9e945">
+          <condition condition_id="b10c01c025564d97901ce2a1a4cb746c" delay="0.00000000" comparison="released" condition-type="state" key="is_cargo_scoop_down" ignore-release="False"/>
+        </activation-condition>
+        <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+          <client client-name="Any" selected="True"/>
+        </remote-config>
+      </run-process>
+    </action-set>
+    <activation-condition rule="all" condition_id="35b02a74adf642f8bcd08fb692a97190"/>
+  </container>
+</container_template>

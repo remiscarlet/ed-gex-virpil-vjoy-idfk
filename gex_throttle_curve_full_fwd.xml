@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<curve_preset>
+  <curve-data mode="none" centered="False" id="8905e4d526c54a6f880cd2439652e3a0">
+    <mapping type="cubic-spline">
+      <control-point x="-1.00000" y="0.00400"/>
+      <control-point x="1.00000" y="1.00000"/>
+    </mapping>
+    <deadzone low="-1.00000" center-low="0.00000" center-high="0.00000" high="1.00000"/>
+  </curve-data>
+</curve_preset>

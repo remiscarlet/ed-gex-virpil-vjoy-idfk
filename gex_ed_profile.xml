@@ -10,7 +10,7 @@
   <devices>
     <device name="RIGHT VPC Stick MT-50CM3" label="" device-guid="00004f5006df11f1800e444553540000" type="joystick">
       <mode name="Default">
-        <axis id="1">
+        <axis id="1" description="Roll">
           <container type="basic" container_id="3d4a944a109743818c256e9ab22d1610" collapsed="False">
             <action-set>
               <vjoyremap vjoy="1" axis="1" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="1" action_id="aad2488f42524335ab67d550865a1173" priority="9">
@@ -22,7 +22,7 @@
             <activation-condition rule="all" condition_id="66bdea2a69f94e4ebb3c3faf29e480fb"/>
           </container>
         </axis>
-        <axis id="2">
+        <axis id="2" description="Pitch">
           <container type="basic" container_id="a58d136843d949d496da533bbbc3966c" collapsed="False">
             <action-set>
               <vjoyremap vjoy="1" axis="2" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="2" action_id="82a5f3df559b4c3bbd187661dcff9353" priority="9">
@@ -34,10 +34,10 @@
             <activation-condition rule="all" condition_id="d41e84a935b54c73a8e12bfb857736bf"/>
           </container>
         </axis>
-        <axis id="4">
+        <axis id="4" description="?? Thrusters ??">
           <container type="basic" container_id="367423fd649d4c37bd9d84a537a5988b" collapsed="False">
             <action-set>
-              <vjoyremap vjoy="2" axis="3" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="3" action_id="5b763d8420404c3f9b6289c12a8c8ae6" priority="9">
+              <vjoyremap vjoy="2" axis="1" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="1" action_id="5b763d8420404c3f9b6289c12a8c8ae6" priority="9">
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
                   <client client-name="Any" selected="True"/>
                 </remote-config>
@@ -46,7 +46,7 @@
             <activation-condition rule="all" condition_id="567513361b034816a8e976534fbbfe4d"/>
           </container>
         </axis>
-        <axis id="5">
+        <axis id="5" description="Fwd/Back Thrusters">
           <container type="basic" container_id="d1780312ac0f46d183315958c5e0c1e2" collapsed="False">
             <action-set>
               <vjoyremap vjoy="2" axis="2" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="2" action_id="9c68a5221f3f4e208a2cb92fcb455e5d" priority="9">
@@ -56,6 +56,16 @@
               </vjoyremap>
             </action-set>
             <activation-condition rule="all" condition_id="51232781455542bbb4ee08dc9f7f5151"/>
+          </container>
+        </axis>
+        <axis id="7" description="Handbrake">
+          <container type="basic" container_id="0725633629ec4bf48730975c13485a1f" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" axis="3" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="3" action_id="655db54cdde948eab77b904d1b036374" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </vjoyremap>
+            </action-set>
+            <activation-condition rule="all" condition_id="0442950b97a942bbb229e3dfa8507c97"/>
           </container>
         </axis>
         <button id="1" description="Auto Pulse OFF">
@@ -75,7 +85,7 @@
             <activation-condition rule="all" condition_id="a24fb658e1b54fa5abc49a3ea3e824c3"/>
           </container>
         </button>
-        <button id="10">
+        <button id="10" description="SYS PIP">
           <container type="basic" container_id="7a05a9aade0d4f69812f55d0fd729ab8" collapsed="False">
             <action-set>
               <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="d80aa92c722943b49b17710affe233ad" priority="5">
@@ -89,7 +99,7 @@
             <activation-condition rule="all" condition_id="397d54cf5a25416bb79c3d9e9e338ac3"/>
           </container>
         </button>
-        <button id="11">
+        <button id="11" description="RESET PIP">
           <container type="basic" container_id="0205573636044bfb9e25834f5e0ffc28" collapsed="False">
             <action-set>
               <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="4619ef08eeb24ab3845dc51c9c2c5550" priority="5">
@@ -103,7 +113,7 @@
             <activation-condition rule="all" condition_id="7b754c9a53984f889a215fa61af1ec92"/>
           </container>
         </button>
-        <button id="12">
+        <button id="12" description="WEP PIP">
           <container type="basic" container_id="048cc0b1650e4e619f5bd8c213a4e298" collapsed="False">
             <action-set>
               <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="c90077dd82ae4b6497f684f06739be2d" priority="5">
@@ -115,6 +125,16 @@
               </map-to-keyboard-ex>
             </action-set>
             <activation-condition rule="all" condition_id="9b28f5a799814a6f9767db7aeb1856fe"/>
+          </container>
+        </button>
+        <button id="13">
+          <container type="basic" container_id="e5d3205279dd45a098041283f1ec23d2" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="6" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="6" action_id="691144c87a7d49e1b5dfbbfcc9b2286d" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </vjoyremap>
+            </action-set>
+            <activation-condition rule="all" condition_id="08c8733c52924a80bb88e1fb234014b4"/>
           </container>
         </button>
         <button id="15" description="Up (1)">
@@ -177,16 +197,14 @@
             <activation-condition rule="all" condition_id="3ac06aa9bfe84e23816e48c967cd3bd1"/>
           </container>
         </button>
-        <button id="23">
-          <container type="basic" container_id="6af1ae3728974ba6bdd3333a4467da8b" collapsed="False">
+        <button id="23" description="MODIFIER 1">
+          <container type="basic" container_id="1baf9f4de7bd414ba9c4453f46a012f7" collapsed="False">
             <action-set>
-              <vjoyremap vjoy="1" button="2" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="2" action_id="0a0f541cbf844b95843644db0d5b2aa7" priority="9">
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
-                  <client client-name="Any" selected="True"/>
-                </remote-config>
+              <vjoyremap vjoy="2" button="16" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="16" action_id="cc4152021ab745ddb5eccf7a242d09df" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
               </vjoyremap>
             </action-set>
-            <activation-condition rule="all" condition_id="0735d2062e1c410cb8d53547a8e71b1d"/>
+            <activation-condition rule="all" condition_id="ef4a645046ef4add8078d4a597e95a84"/>
           </container>
         </button>
         <button id="24" description="Up (2)">
@@ -237,6 +255,46 @@
             <activation-condition rule="all" condition_id="ceab4dfddf7f48e397e88c868d15e468"/>
           </container>
         </button>
+        <button id="28" description="??">
+          <container type="basic" container_id="215972813a8342c18ad9699f8aee6f14" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="4" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="4" action_id="a04d6ccaeefa4188a2c4d66f44087153" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </vjoyremap>
+            </action-set>
+            <activation-condition rule="all" condition_id="ad67ab77da614f5b8d5c975013bb730f"/>
+          </container>
+        </button>
+        <button id="29" description="??">
+          <container type="basic" container_id="7c2e6c6abe7744fba849d02dae90b9d6" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="2" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="2" action_id="796636d627fb4451a1506094a8f38e8b" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </vjoyremap>
+            </action-set>
+            <activation-condition rule="all" condition_id="a1ef38753b644b708a0136f8b4c34f65"/>
+          </container>
+        </button>
+        <button id="30" description="??">
+          <container type="basic" container_id="43b19777faca4075a47f0700f7308970" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="3" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="3" action_id="3ef3ba3e17bf41d386a82aecb1518dbd" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </vjoyremap>
+            </action-set>
+            <activation-condition rule="all" condition_id="b8d5d8e07d71491886511b0556df9639"/>
+          </container>
+        </button>
+        <button id="31" description="UI Back">
+          <container type="basic" container_id="69bc06dae762449fadd349001745543c" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="2" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="2" action_id="ed17f3851fe942d1ac64507ce3eaf1d4" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </vjoyremap>
+            </action-set>
+            <activation-condition rule="all" condition_id="2c52d521dd044968908c44c9f539c4a1"/>
+          </container>
+        </button>
         <button id="4" description="Primary Fire">
           <container type="basic" container_id="0ba4640d23be42348ef91446afcff986" comment="Single Fire" collapsed="True">
             <action-set>
@@ -275,7 +333,17 @@
             <activation-condition rule="all" condition_id="4ce8ff32098b4b43a43488831102ab57"/>
           </container>
         </button>
-        <button id="9">
+        <button id="7">
+          <container type="basic" container_id="43fbfc5f34694100a4df694bde65909d" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" button="5" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="5" action_id="23dc6aa261b54b31b57640d9e24bf741" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </vjoyremap>
+            </action-set>
+            <activation-condition rule="all" condition_id="02271659933b44fa8a6cda54aa9f4022"/>
+          </container>
+        </button>
+        <button id="9" description="ENG PIP">
           <container type="basic" container_id="d73d0e1a88b646abb52a4f1d2d455d12" collapsed="False">
             <action-set>
               <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="91aca01d46194e57925dbf3f4587bf12" priority="5">
@@ -296,7 +364,7 @@
         <axis id="1" description="Horizontal Thrusters">
           <container type="basic" container_id="81abf2806ec642f88703c32e44c8d1c8" collapsed="False">
             <action-set>
-              <vjoyremap vjoy="1" axis="5" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="5" action_id="c3efb8810f034843bef0f81d280e86a0" priority="9">
+              <vjoyremap vjoy="1" axis="4" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="4" action_id="c3efb8810f034843bef0f81d280e86a0" priority="9">
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
                   <client client-name="Any" selected="True"/>
                 </remote-config>
@@ -308,7 +376,7 @@
         <axis id="2" description="Vertical Thrusters">
           <container type="basic" container_id="7ebbb450503f4b8ba684a546a658bdbf" collapsed="False">
             <action-set>
-              <vjoyremap vjoy="1" axis="4" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="4" action_id="71ab17e3f2224fafa504f335fe9c0ca2" priority="9">
+              <vjoyremap vjoy="1" axis="5" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="5" action_id="71ab17e3f2224fafa504f335fe9c0ca2" priority="9">
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
                   <client client-name="Any" selected="True"/>
                 </remote-config>
@@ -318,9 +386,9 @@
           </container>
         </axis>
         <axis id="4" description="Throttle (L)(Main)">
-          <container type="basic" container_id="847721269c244b5ab3509f20ea28d6b4" comment="Full Forward" collapsed="True">
+          <container type="basic" container_id="57e171df231048588bcc444d7ec3f9ae" collapsed="False">
             <action-set>
-              <vjoyremap vjoy="1" axis="3" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="3" action_id="9c9aab19dce5493cb291fda69e37efa2" priority="9">
+              <vjoyremap vjoy="1" axis="6" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="6" action_id="85669059340d4630aac84fbe2a653bc4" priority="9">
                 <curve-data mode="none" centered="False" id="8905e4d526c54a6f880cd2439652e3a0">
                   <mapping type="cubic-spline">
                     <control-point x="-1.00000" y="0.00400"/>
@@ -328,19 +396,17 @@
                   </mapping>
                   <deadzone low="-1.00000" center-low="0.00000" center-high="0.00000" high="1.00000"/>
                 </curve-data>
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
-                  <client client-name="Any" selected="True"/>
-                </remote-config>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
               </vjoyremap>
             </action-set>
-            <activation-condition rule="all" condition_id="b2daa559009f49acb57145d3aa758aad"/>
+            <activation-condition rule="all" condition_id="8442877df29a4c31b4a0d4d5ebb51119"/>
           </container>
         </axis>
         <axis id="5" description="Throttle (R)"/>
         <axis id="6" description="?? Lever">
           <container type="basic" container_id="0f54d13e3d0049f9a8f2f5453da0a3d4" collapsed="False">
             <action-set>
-              <vjoyremap vjoy="1" axis="8" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="8" action_id="5aa8b088724a44afa22bdce49b590174" priority="9">
+              <vjoyremap vjoy="1" axis="7" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="7" action_id="5aa8b088724a44afa22bdce49b590174" priority="9">
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
                   <client client-name="Any" selected="True"/>
                 </remote-config>
@@ -349,10 +415,10 @@
             <activation-condition rule="all" condition_id="5061463835854da099f7b75aee2f649a"/>
           </container>
         </axis>
-        <axis id="7">
+        <axis id="7" description="?? Side Knob">
           <container type="basic" container_id="aacc2bc93b73463c88d5b3cbde97d983" collapsed="False">
             <action-set>
-              <vjoyremap vjoy="1" axis="7" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="7" action_id="60ec931bd9094835b9b3108fb94e5778" priority="9">
+              <vjoyremap vjoy="1" axis="8" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="8" action_id="60ec931bd9094835b9b3108fb94e5778" priority="9">
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
                   <client client-name="Any" selected="True"/>
                 </remote-config>
@@ -361,10 +427,10 @@
             <activation-condition rule="all" condition_id="6475879aebd84c4aae8c0dd06b3e67ec"/>
           </container>
         </axis>
-        <axis id="8">
+        <axis id="8" description="?? Top Knob">
           <container type="basic" container_id="e222dd9d7dbf4094bdff70088442d679" collapsed="False">
             <action-set>
-              <vjoyremap vjoy="2" axis="1" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="1" action_id="50ce9b9c9f5948599339f3e7c42b5d4e" priority="9">
+              <vjoyremap vjoy="2" axis="7" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="7" action_id="50ce9b9c9f5948599339f3e7c42b5d4e" priority="9">
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
                   <client client-name="Any" selected="True"/>
                 </remote-config>
@@ -373,7 +439,27 @@
             <activation-condition rule="all" condition_id="1096cdf444634b6c87dde370dbd9adc3"/>
           </container>
         </axis>
-        <button id="11">
+        <button id="1" description="??">
+          <container type="basic" container_id="e7c77abd9daa41369771b8be21c81826" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="11" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="11" action_id="a9f453b817f3455f8c3a01df91ea9ef9" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </vjoyremap>
+            </action-set>
+            <activation-condition rule="all" condition_id="201b4d6dfe094ef58b9e3d19c6d8f25d"/>
+          </container>
+        </button>
+        <button id="10" description="??">
+          <container type="basic" container_id="1571b90c25b64a15b959ce6d09e0118c" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="12" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="12" action_id="efeed11bdf2e46dabd9ff88e5cb78526" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </vjoyremap>
+            </action-set>
+            <activation-condition rule="all" condition_id="0627ad968f92472c93eae91447a7d8a6"/>
+          </container>
+        </button>
+        <button id="11" description="Next Page/Tab">
           <container type="basic" container_id="44dbdec958754bd3b3bbd2fafa4589e7" collapsed="False">
             <action-set>
               <vjoyremap vjoy="1" button="5" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="5" action_id="4b1c3b043d884247b738f852309e041c" priority="9">
@@ -385,7 +471,7 @@
             <activation-condition rule="all" condition_id="fd952e9bcbb34611bd24393b525753b6"/>
           </container>
         </button>
-        <button id="13">
+        <button id="13" description="Prev Page/Tab">
           <container type="basic" container_id="6d2b1a1b453f40f09ed6ff96958c5901" collapsed="False">
             <action-set>
               <vjoyremap vjoy="1" button="6" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="6" action_id="c53f17578bc841fda507e95bb489e695" priority="9">
@@ -395,6 +481,16 @@
               </vjoyremap>
             </action-set>
             <activation-condition rule="all" condition_id="9989346215874042b92d0933f5172210"/>
+          </container>
+        </button>
+        <button id="15" description="Headlook">
+          <container type="basic" container_id="8793627f888d4be695bd58eaf1c86820" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="13" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="13" action_id="d85b0a24130144bd885904b09b751fa8" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </vjoyremap>
+            </action-set>
+            <activation-condition rule="all" condition_id="3c1a88cdfc72431791ca41aeb438cb67"/>
           </container>
         </button>
         <button id="16" description="Temp FA Toggle">
@@ -409,6 +505,90 @@
               </map-to-keyboard-ex>
             </action-set>
             <activation-condition rule="all" condition_id="9ad9d174335f4571aa74dab6e7a4b3bc"/>
+          </container>
+        </button>
+        <button id="17" description="Supercruise">
+          <container type="basic" container_id="bf6b4c4a7c37485ca964518ac48d95c5" collapsed="False">
+            <action-set>
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="e76d4acd1ddf4ab793b89bc08518e5ee" priority="5">
+                <!--virtual: Numpad / (FSlash) 0x6f/111 scan code: 0x35/53 extended: True-->
+                <key virtual-code="111" scan-code="53" extended="True" description="Numpad / (FSlash)"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+            <activation-condition rule="all" condition_id="6ee3af0474ad4123b3e7a3955ab1aa82"/>
+          </container>
+        </button>
+        <button id="22">
+          <container type="basic" container_id="e8bbe2c0a83a4a5b9d798e71d6b8ac8a" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="1" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="1" action_id="93d19a62207a49ada2f3e2eed7aa1938" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </vjoyremap>
+            </action-set>
+            <activation-condition rule="all" condition_id="8c87163f7a1f4723b76ff67814103be6"/>
+          </container>
+        </button>
+        <button id="23" description="Galaxy Map">
+          <container type="basic" container_id="81590f513262427eb534c4ac9e58c62d" collapsed="False">
+            <action-set>
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="6a52a05d382f47bc80181ee8c1c0ae01" priority="5">
+                <!--virtual: Left Shift 0xa0/160 scan code: 0x2a/42 extended: False-->
+                <key virtual-code="160" scan-code="42" extended="False" description="Left Shift"/>
+                <!--virtual: ; 0xba/186 scan code: 0x27/39 extended: False-->
+                <key virtual-code="186" scan-code="39" extended="False" description=";"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+            <activation-condition rule="all" condition_id="5b3aefc8ccb24fa6ba626921def97694"/>
+          </container>
+        </button>
+        <button id="25" description="Orbital Lines">
+          <container type="basic" container_id="c51df222d420410aa8f7554642d4f919" collapsed="False">
+            <action-set>
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="9e6dea29f8fd486bb8e51317ce2bf717" priority="5">
+                <!--virtual: = 0xbb/187 scan code: 0xd/13 extended: False-->
+                <key virtual-code="187" scan-code="13" extended="False" description="="/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+            <activation-condition rule="all" condition_id="e89db02908c1490cbdafc7f60d257928"/>
+          </container>
+        </button>
+        <button id="26" description="System Map">
+          <container type="basic" container_id="42cbb3af7f3741c5b2c107e9f66165a0" collapsed="False">
+            <action-set>
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="0410ef3d42de42079bf672f43503072d" priority="5">
+                <!--virtual: ; 0xba/186 scan code: 0x27/39 extended: False-->
+                <key virtual-code="186" scan-code="39" extended="False" description=";"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+            <activation-condition rule="all" condition_id="35a84c9c8f2a4e8ca190033c1f91bd99"/>
+          </container>
+        </button>
+        <button id="28" description="Rotational Correction">
+          <container type="basic" container_id="ba822e4a568e4f859727a5c3e789aeb8" collapsed="False">
+            <action-set>
+              <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="ef5f6197ebdd461ea93bc81e0fe16b56" priority="5">
+                <!--virtual: F4 0x73/115 scan code: 0x3e/62 extended: False-->
+                <key virtual-code="115" scan-code="62" extended="False" description="F4"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+            <activation-condition rule="all" condition_id="93c1720402ec4ac4b780440a3c78c484"/>
+          </container>
+        </button>
+        <button id="29" description="Friendship Drive">
+          <container type="basic" container_id="3d6a1d20accb492bb12ee7731fd157fe" collapsed="False">
+            <action-set>
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="5ef722392c7f44db9088757ea61c93d6" priority="5">
+                <!--virtual: Numpad Delete 0x6e/110 scan code: 0x53/83 extended: False-->
+                <key virtual-code="110" scan-code="83" extended="False" description="Numpad Delete"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+            <activation-condition rule="all" condition_id="7ece0b6792ae4e98a1a736b5c669ae85"/>
           </container>
         </button>
         <button id="3" description="Boost Juice">
@@ -428,7 +608,7 @@
         <button id="30" description="FA Toggle">
           <container type="basic" container_id="be1d819dd3fb45c49040497b25d6867a" collapsed="False">
             <action-set>
-              <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="8d647ff2f27747bb897ecb10878fa30b" priority="5">
+              <map-to-keyboard-ex mode="pulse" delay="15" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="8d647ff2f27747bb897ecb10878fa30b" priority="5">
                 <!--virtual: Z 0x5a/90 scan code: 0x2c/44 extended: False-->
                 <key virtual-code="90" scan-code="44" extended="False" description="Z"/>
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
@@ -437,6 +617,18 @@
               </map-to-keyboard-ex>
             </action-set>
             <activation-condition rule="all" condition_id="65d020118e3e4ffa9d96af5f5a12a659"/>
+          </container>
+        </button>
+        <button id="31" description="Hardpoints Toggle">
+          <container type="basic" container_id="dc7f9cf1cce74b89b03b0e3823dc34a4" collapsed="False">
+            <action-set>
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="0578121ce7744217a5c35e1bfcd17461" priority="5">
+                <!--virtual: U 0x55/85 scan code: 0x16/22 extended: False-->
+                <key virtual-code="85" scan-code="22" extended="False" description="U"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+            <activation-condition rule="all" condition_id="1cf54a89fa5243dcbd41cc92712e3d41"/>
           </container>
         </button>
         <button id="32" description="Throttle Full Fwd/Back Toggle">
@@ -467,39 +659,61 @@
           </container>
         </button>
         <button id="35" description="Landing Gear">
-          <container type="basic" container_id="cce659a79d5145c8a0c3fed8ab9b389e" collapsed="False">
+          <container type="basic" container_id="f18dcdbd8ae746759060e51a21afd6b1" collapsed="False">
             <action-set>
-              <map_to_state key="is_landing_gear_down" state-id="8aa30d6bf72042b5a1c6fe1db5ac8b19" mode="toggle" delay="250" exec_on_press="True" exec_on_release="False" sync-mode="0" default-reset="True" randomize-mode="False" randomize-weight="0.50000000" action_id="9782cb988d904626b18287f0e6f84c8e" priority="5">
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="685d6288cb764eaf8b0da04e212327e5" priority="5">
+                <!--virtual: L 0x4c/76 scan code: 0x26/38 extended: False-->
+                <key virtual-code="76" scan-code="38" extended="False" description="L"/>
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
-              </map_to_state>
+              </map-to-keyboard-ex>
             </action-set>
-            <activation-condition rule="all" condition_id="d1ec0ca13dd24aeebc5051ec4be17551"/>
+            <activation-condition rule="all" condition_id="6cdccdea37cc4c1bae77a2182728fb03"/>
           </container>
         </button>
         <button id="37" description="Cargo Scoop">
-          <container type="basic" container_id="7639d94ed38d4cd9affe8f8fa96aec0e" collapsed="False">
+          <container type="basic" container_id="2abca1e3f6334f828adf1d3e51fa9527" collapsed="False">
             <action-set>
-              <map_to_state key="is_cargo_scoop_down" state-id="550d0f09578f44458ef8469a0d0d1938" mode="toggle" delay="250" exec_on_press="True" exec_on_release="False" sync-mode="0" default-reset="True" randomize-mode="False" randomize-weight="0.50000000" action_id="31713d43c2c44887afc3749cc16d1395" priority="5">
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
-                  <client client-name="Any" selected="True"/>
-                </remote-config>
-              </map_to_state>
-            </action-set>
-            <activation-condition rule="all" condition_id="f8ebd4d243aa41ea84f4ac95153c51fb"/>
-          </container>
-        </button>
-        <button id="39">
-          <container type="basic" container_id="dad4d032396b4e6c937ce67496adcd7c" collapsed="False">
-            <action-set>
-              <map-to-keyboard-ex mode="toggle" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="6cac1cbb7ac44ff5a0a328c20e19f5e7" priority="5">
-                <!--virtual: Z 0x5a/90 scan code: 0x2c/44 extended: False-->
-                <key virtual-code="90" scan-code="44" extended="False" description="Z"/>
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
-                  <client client-name="Any" selected="True"/>
-                </remote-config>
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="ac728a92797d499592088b6668bfaec1" priority="5">
+                <!--virtual: Home 0x24/36 scan code: 0x47/71 extended: True-->
+                <key virtual-code="36" scan-code="71" extended="True" description="Home"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
               </map-to-keyboard-ex>
             </action-set>
-            <activation-condition rule="all" condition_id="6cad9bdd12b2459e9cf04bc5401d46b3"/>
+            <activation-condition rule="all" condition_id="cc8c667745d243f6b0259ed970814906"/>
+          </container>
+        </button>
+        <button id="38" description="Lights">
+          <container type="basic" container_id="79b89a5d2f374642a2fdfe774eeeb272" collapsed="False">
+            <action-set>
+              <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="4ec9ec8fe50a40678e790fbf016b4841" priority="5">
+                <!--virtual: Insert 0x2d/45 scan code: 0x52/82 extended: True-->
+                <key virtual-code="45" scan-code="82" extended="True" description="Insert"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+            <activation-condition rule="all" condition_id="e6b2755a8e0a4048a0b53c9d39328096"/>
+          </container>
+        </button>
+        <button id="4" description="??">
+          <container type="basic" container_id="18f6da0f2d214269a8e4cb4cd0dc2e60" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="1" button="14" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="14" action_id="4884c4a6ee60444fa01f0040ba1d3f75" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </vjoyremap>
+            </action-set>
+            <activation-condition rule="all" condition_id="abfa201ebdf44f0e8dd292f406c86b4d"/>
+          </container>
+        </button>
+        <button id="40" description="Heatsink">
+          <container type="basic" container_id="36cd533074f44acb956f4959c1e55634" collapsed="False">
+            <action-set>
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="3f9c13c944974bcd8b06ab074e07d6dd" priority="5">
+                <!--virtual: V 0x56/86 scan code: 0x2f/47 extended: False-->
+                <key virtual-code="86" scan-code="47" extended="False" description="V"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+            <activation-condition rule="all" condition_id="790f0e527f0149e19a77d28e3f4116a8"/>
           </container>
         </button>
         <button id="5" description="Roles Panel">
@@ -555,7 +769,7 @@
         <axis id="4">
           <container type="basic" container_id="fcf7cd239e304ba4957800b81a8f6ae4" collapsed="False">
             <action-set>
-              <vjoyremap vjoy="1" axis="1" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="1" action_id="ad4b89f5928040bd9f94cd6b0f8b2d3f" priority="9">
+              <vjoyremap vjoy="1" axis="6" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="6" action_id="ad4b89f5928040bd9f94cd6b0f8b2d3f" priority="9">
                 <curve-data mode="none" centered="False" id="0ed43fc8674a4c03b11e65896b906a84">
                   <mapping type="cubic-spline">
                     <control-point x="-1.00000" y="-0.50000"/>
@@ -576,7 +790,7 @@
         <axis id="4">
           <container type="basic" container_id="6c761ee652014dccbe36d74ec9b74551" collapsed="False">
             <action-set>
-              <vjoyremap vjoy="1" axis="1" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="1" action_id="5f4aff9cf4d24ea892211f778f166ac3" priority="9">
+              <vjoyremap vjoy="1" axis="6" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="6" action_id="5f4aff9cf4d24ea892211f778f166ac3" priority="9">
                 <curve-data mode="none" centered="False" id="e761b72a248146479382eb8b8667115f">
                   <mapping type="cubic-spline">
                     <control-point x="-1.00000" y="-0.00000"/>
@@ -597,7 +811,7 @@
         <axis id="4">
           <container type="basic" container_id="3e8b09785199486c9f4a2fa5bddfb87e" collapsed="False">
             <action-set>
-              <vjoyremap vjoy="1" axis="1" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="1" action_id="6c658533731745b29a5912c7e6ca7fc6" priority="9">
+              <vjoyremap vjoy="1" axis="6" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="6" action_id="6c658533731745b29a5912c7e6ca7fc6" priority="9">
                 <curve-data mode="none" centered="False" id="96a413fb82414ca084eca4bae4c2409f">
                   <mapping type="cubic-spline">
                     <control-point x="-1.00000" y="-0.00000"/>
@@ -617,10 +831,26 @@
     </device>
     <device name="T-Pendular-Rudder" label="" device-guid="9ff2d4b00f0511f08003444553540000" type="joystick">
       <mode name="Default">
-        <axis id="3">
+        <axis id="1" description="?? Left Brake Pedal">
+          <container type="basic" container_id="a5b5b60d52ef41869bd14060baa49eb9" collapsed="False">
+            <action-set>
+              <vjoyremap vjoy="2" axis="4" mode="VJoyMergeAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" invert-merged-output="False" merge_invert="False" merge_min="-1.00000000" merge_max="1.00000000" reverse="True" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="4" action_id="aa4be53fbe2a4ef398b9cc1aefe7f8b4" priority="9">
+                <merge-axis>
+                  <merge-data device-id="9ff2d4b00f0511f08003444553540000" input-id="2" operation="add" invert="True">
+                    <!--Merged Device: T-Pendular-Rudder/[9ff2d4b00f0511f08003444553540000] Axis: [2]/Axis (2) Y L2 Operation: [add]-->
+                  </merge-data>
+                </merge-axis>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </vjoyremap>
+            </action-set>
+            <activation-condition rule="all" condition_id="07f687d5e35e4149b52d357585b7758d"/>
+          </container>
+        </axis>
+        <axis id="2" description="?? Right Brake Pedal"/>
+        <axis id="3" description="Yaw Pedals Activate Headlook">
           <container type="basic" container_id="4a747887102245118c9fa03989832cc2" collapsed="False">
             <action-set>
-              <vjoyremap vjoy="1" axis="1" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="1" action_id="8044ffb743c64b8dbe71d30e8c8d2126" priority="9">
+              <vjoyremap vjoy="1" axis="3" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="3" action_id="8044ffb743c64b8dbe71d30e8c8d2126" priority="9">
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
                   <client client-name="Any" selected="True"/>
                 </remote-config>
@@ -736,7 +966,42 @@
         <modecontrol id="0" description="Mode Enter Actions">
           <container type="basic" container_id="dd11dd544ebb4227b2e4c3c46ce2c4b6" collapsed="False">
             <action-set>
-              <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;0196&#10;0&#10;FF&#10;40&#10;00" line_per_arg="True" exec_on_release="False" action_id="5ab92a03203b4ccaa7e4ade073979a2b" priority="5">
+              <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;0196&#10;0&#10;FF&#10;40&#10;00" line_per_arg="True" exec_on_release="False" action_id="5ab92a03203b4ccaa7e4ade073979a2b" comment="Reset All LED Colors" priority="5">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </run-process>
+              <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;0196&#10;1&#10;40&#10;80&#10;FF" line_per_arg="True" exec_on_release="False" action_id="e2d8e245b12f4b27945a156430b4fd83" comment="Set Galaxy Map Color" priority="5">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </run-process>
+              <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;0196&#10;4&#10;40&#10;80&#10;FF" line_per_arg="True" exec_on_release="False" action_id="78e0bc0583a94a5e9e0d391655b76c3e" comment="Set System Map Color" priority="5">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </run-process>
+              <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;0196&#10;2&#10;00&#10;FF&#10;11" line_per_arg="True" exec_on_release="False" action_id="7e0fbc95110e4dfb8a6b31d4103637c1" comment="Set TBD Colors" priority="5">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </run-process>
+              <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;0196&#10;5&#10;00&#10;FF&#10;11" line_per_arg="True" exec_on_release="False" action_id="a9a1921236b948699d58159c887c73d4" comment="Set TBD Colors" priority="5">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </run-process>
+              <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;0196&#10;3&#10;EE&#10;FF&#10;00" line_per_arg="True" exec_on_release="False" action_id="7e1bbe24f4784b87be7e3883fb01a9b4" comment="Set Orbital Line Colors" priority="5">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </run-process>
+              <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;0196&#10;6&#10;EE&#10;FF&#10;00" line_per_arg="True" exec_on_release="False" action_id="0ec2090d793b4d8dbac2450672f3d5a5" comment="Set Rotational Correction Colors" priority="5">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </run-process>
+              <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;0196&#10;7&#10;F&#10;4&#10;9" line_per_arg="True" exec_on_release="False" action_id="87087c8faf9d4c5098647bc48958d797" comment="FSD Color" priority="5">
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
                   <client client-name="Any" selected="True"/>
                 </remote-config>
@@ -838,7 +1103,6 @@
       <filter device="a220dbb0077011f18010444553540000" type="hat" id="1" filter="False"/>
       <device id="9ff2d4b00f0511f08003444553540000" name="T-Pendular-Rudder"/>
       <filter device="9ff2d4b00f0511f08003444553540000" type="axis" id="1" filter="False"/>
-      <filter device="9ff2d4b00f0511f08003444553540000" type="axis" id="2" filter="False"/>
       <filter device="9ff2d4b00f0511f08003444553540000" type="axis" id="3" filter="False"/>
       <device id="702d2f9006db11f18009444553540000" name="VPC VMAX Prime Throttle"/>
       <filter device="702d2f9006db11f18009444553540000" type="axis" id="1" filter="False"/>
@@ -939,7 +1203,11 @@
       <filter device="00004f5006df11f1800e444553540000" type="button" id="32" filter="False"/>
     </input-filter>
   </settings>
-  <plugins/>
+  <plugins>
+    <plugin file-name="S:/Elite Dangerous Joystick Stuff/Remi's Elite Dangerous Stuff/elite_status_state_sync_gex.py">
+      <instance name="Default"/>
+    </plugin>
+  </plugins>
   <start>
     <devices/>
   </start>
@@ -957,19 +1225,7 @@
         <activation-condition rule="all" condition_id="e83ca6cb2b9e49f68b4e585eae206371"/>
       </container>
     </state>
-    <state id="550d0f09578f44458ef8469a0d0d1938" key="is_cargo_scoop_down" value="False" type="bool" category_id="5e54b523700c4a5996bfea85ce1ea75e" is_expression="False" autorelease="False" autorelease-delay="1.00000000" autorelease-mode="toggle" autorelease-trigger="on">
-      <container type="basic" container_id="caaee3d638034fbbb099a250526adc95" comment="Send Keypress" collapsed="True">
-        <action-set>
-          <map-to-keyboard-ex mode="pulse" delay="49" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="True" wheel-factor="1" action_id="8168c7e931874cc396c7a288ead9036f" priority="5">
-            <!--virtual: Home 0x24/36 scan code: 0x47/71 extended: True-->
-            <key virtual-code="36" scan-code="71" extended="True" description="Home"/>
-            <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
-              <client client-name="Any" selected="True"/>
-            </remote-config>
-          </map-to-keyboard-ex>
-        </action-set>
-        <activation-condition rule="all" condition_id="c4e0fa9fc8ac433eb303952503cc1edf"/>
-      </container>
+    <state id="550d0f09578f44458ef8469a0d0d1938" key="is_cargo_scoop_down" value="False" type="bool" category_id="5e54b523700c4a5996bfea85ce1ea75e" is_expression="False" autorelease="False" autorelease-delay="1.00000000" autorelease-mode="toggle" autorelease-trigger="on" description="This state is a mirror of Status.json. Actions do NOT update the state">
       <container type="basic" container_id="658684e632574d72a215f76390578d51" comment="Send LED Updates" collapsed="False">
         <action-set>
           <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;0196&#10;13&#10;FF&#10;00&#10;00" line_per_arg="True" exec_on_release="False" action_id="26e413ce9c5d496e8270916d95fcfad8" comment="RED LED" priority="5">
@@ -992,19 +1248,7 @@
         <activation-condition rule="all" condition_id="35b02a74adf642f8bcd08fb692a97190"/>
       </container>
     </state>
-    <state id="8aa30d6bf72042b5a1c6fe1db5ac8b19" key="is_landing_gear_down" value="False" type="bool" category_id="5e54b523700c4a5996bfea85ce1ea75e" is_expression="False" autorelease="False" autorelease-delay="1.00000000" autorelease-mode="toggle" autorelease-trigger="on">
-      <container type="basic" container_id="7d423b2dbb0845abba80e564bf04000a" collapsed="True">
-        <action-set>
-          <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="True" wheel-factor="1" action_id="a50a1920701d405d9df299524f5cc400" priority="5">
-            <!--virtual: L 0x4c/76 scan code: 0x26/38 extended: False-->
-            <key virtual-code="76" scan-code="38" extended="False" description="L"/>
-            <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
-              <client client-name="Any" selected="True"/>
-            </remote-config>
-          </map-to-keyboard-ex>
-        </action-set>
-        <activation-condition rule="all" condition_id="05f0d4d285cc4ea89e8e1027fdbca3e9"/>
-      </container>
+    <state id="8aa30d6bf72042b5a1c6fe1db5ac8b19" key="is_landing_gear_down" value="False" type="bool" category_id="5e54b523700c4a5996bfea85ce1ea75e" is_expression="False" autorelease="False" autorelease-delay="1.00000000" autorelease-mode="toggle" autorelease-trigger="on" description="This state is a mirror of Status.json. Actions do NOT update the state">
       <container type="basic" container_id="48e646c2e2504e59adede975a2713bb0" comment="Send LED Updates" collapsed="False">
         <action-set>
           <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;0196&#10;12&#10;FF&#10;00&#10;00" line_per_arg="True" exec_on_release="False" action_id="717fdc597d504c8f840d65e7cfd030d4" comment="RED LED" priority="5">
