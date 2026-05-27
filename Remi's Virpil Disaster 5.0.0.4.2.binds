@@ -99,11 +99,11 @@
 	</AheadThrust>
 	<ForwardThrustButton>
 		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="044FB68F" Key="Neg_Joy_XAxis" />
 	</ForwardThrustButton>
 	<BackwardThrustButton>
 		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="044FB68F" Key="Neg_Joy_YAxis" />
 	</BackwardThrustButton>
 	<UseAlternateFlightValuesToggle>
 		<Primary Device="{NoDevice}" Key="" />
@@ -677,7 +677,7 @@
 	</HeadLookYawRight>
 	<HeadLookYawAxis>
 		<Binding Device="vJoy" DeviceIndex="0" Key="Joy_RXAxis" />
-		<Inverted Value="1" />
+		<Inverted Value="0" />
 		<Deadzone Value="0.00000000" />
 	</HeadLookYawAxis>
 	<MotionHeadlook Value="0" />
