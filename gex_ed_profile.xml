@@ -8,7 +8,7 @@
     <mode name="b3b159a04d064bd693f97583ec08b877"/>
   </modes>
   <devices>
-    <device name="RIGHT VPC Stick MT-50CM3" label="" device-guid="0000284006df11f1800d444553540000" type="joystick">
+    <device name="RIGHT VPC Stick MT-50CM3" label="" device-guid="00004f5006df11f1800e444553540000" type="joystick">
       <mode name="Default">
         <axis id="1" description="Roll">
           <container container_id="3d4a944a109743818c256e9ab22d1610" collapsed="False" type="basic">
@@ -477,6 +477,64 @@
             </action-set>
           </container>
         </button>
+        <button id="5" description=" System Map">
+          <container container_id="dd0b11665d904a58ac81163133481e28" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="6255acf51cc9425fabe0950a837a06a7"/>
+            <action-set>
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="1b9c55f017e744d9a1a14e5b8f20f93f" priority="5">
+                <!--virtual: ; 0xba/186 scan code: 0x27/39 extended: False-->
+                <key virtual-code="186" scan-code="39" extended="False" description=";"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
+        <button id="6" description="Galaxy Map">
+          <container container_id="00fe88b8f3944bf3962e24424778abde" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="609cd4faeb30420da5dcb84974f0698f"/>
+            <action-set>
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="95c856e594cf416f995631ac32c3a38a" priority="5">
+                <!--virtual: Left Shift 0xa0/160 scan code: 0x2a/42 extended: False-->
+                <key virtual-code="160" scan-code="42" extended="False" description="Left Shift"/>
+                <!--virtual: ; 0xba/186 scan code: 0x27/39 extended: False-->
+                <key virtual-code="186" scan-code="39" extended="False" description=";"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
+        <button id="7" description="Night Vision">
+          <container container_id="f29e1432427349aca9944e5725da3677" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="2affdd4eac4b45a099a8932b02664d2c"/>
+            <action-set>
+              <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="49f72b7c9f2b451a9410f808728cb438" priority="5">
+                <!--virtual: / 0xbf/191 scan code: 0x35/53 extended: False-->
+                <key virtual-code="191" scan-code="53" extended="False" description="/"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
+        <button id="8" description="Ship Lights">
+          <container container_id="76ee4f7eacd54d28b89519fa18d5f998" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="03fea157e8204a8591e6ff618a077ed9"/>
+            <action-set>
+              <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="388cf709f44d4092925eeb2e3387912c" priority="5">
+                <!--virtual: Insert 0x2d/45 scan code: 0x52/82 extended: True-->
+                <key virtual-code="45" scan-code="82" extended="True" description="Insert"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
       </mode>
     </device>
     <device name="VPC VMAX Prime Throttle" label="" device-guid="702d2f9006db11f18009444553540000" type="joystick">
@@ -613,15 +671,11 @@
             </action-set>
           </container>
         </button>
-        <button id="23" description="Galaxy Map">
+        <button id="23" description="??">
           <container container_id="81590f513262427eb534c4ac9e58c62d" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="5b3aefc8ccb24fa6ba626921def97694"/>
             <action-set>
               <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="6a52a05d382f47bc80181ee8c1c0ae01" priority="5">
-                <!--virtual: Left Shift 0xa0/160 scan code: 0x2a/42 extended: False-->
-                <key virtual-code="160" scan-code="42" extended="False" description="Left Shift"/>
-                <!--virtual: ; 0xba/186 scan code: 0x27/39 extended: False-->
-                <key virtual-code="186" scan-code="39" extended="False" description=";"/>
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
                   <client client-name="Any" selected="True"/>
                 </remote-config>
@@ -643,13 +697,11 @@
             </action-set>
           </container>
         </button>
-        <button id="26" description="System Map">
+        <button id="26" description="??">
           <container container_id="42cbb3af7f3741c5b2c107e9f66165a0" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="35a84c9c8f2a4e8ca190033c1f91bd99"/>
             <action-set>
               <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="0410ef3d42de42079bf672f43503072d" priority="5">
-                <!--virtual: ; 0xba/186 scan code: 0x27/39 extended: False-->
-                <key virtual-code="186" scan-code="39" extended="False" description=";"/>
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
                   <client client-name="Any" selected="True"/>
                 </remote-config>
@@ -692,7 +744,9 @@
               <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="6d1580314c2049a698d903f14928e41f" priority="5">
                 <!--virtual: F5 0x74/116 scan code: 0x3f/63 extended: False-->
                 <key virtual-code="116" scan-code="63" extended="False" description="F5"/>
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
               </map-to-keyboard-ex>
             </action-set>
           </container>
@@ -937,11 +991,30 @@
     </device>
     <device name="T-Pendular-Rudder" label="" device-guid="9ff2d4b00f0511f08003444553540000" type="joystick">
       <mode name="Default">
-        <axis id="1" description="?? Left Brake Pedal">
+        <axis id="1" description="?? Right Brake Pedal">
           <container container_id="a5b5b60d52ef41869bd14060baa49eb9" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="07f687d5e35e4149b52d357585b7758d"/>
             <action-set>
-              <vjoyremap vjoy="2" axis="4" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="4" action_id="aa4be53fbe2a4ef398b9cc1aefe7f8b4" priority="9">
+              <vjoyremap vjoy="2" axis="4" mode="VJoyMergeAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" invert-merged-output="False" merge_invert="False" merge_min="-1.00000000" merge_max="1.00000000" reverse="True" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="4" action_id="aa4be53fbe2a4ef398b9cc1aefe7f8b4" priority="9">
+                <merge-axis>
+                  <merge-data device-id="9ff2d4b00f0511f08003444553540000" input-id="2" operation="average" invert="False">
+                    <!--Merged Device: T-Pendular-Rudder/[9ff2d4b00f0511f08003444553540000] Axis: [2]/Axis (2) Y L2 Operation: [average]-->
+                    <curve-data mode="none" centered="False" id="8d12244057b943e1b6b3c5964c2b558b" filtered="False" samples="200" poly="2" window="51">
+                      <mapping type="cubic-spline">
+                        <control-point x="-1.00000" y="-1.00000"/>
+                        <control-point x="1.00000" y="1.00000"/>
+                      </mapping>
+                      <deadzone low="-1.00000" center-low="0.00000" center-high="0.00000" high="1.00000"/>
+                    </curve-data>
+                  </merge-data>
+                </merge-axis>
+                <curve-data mode="none" centered="False" id="1126466f0d03425699f5d5334d41b560" filtered="False" samples="200" poly="2" window="51">
+                  <mapping type="cubic-spline">
+                    <control-point x="-1.00000" y="-1.00000"/>
+                    <control-point x="1.00000" y="1.00000"/>
+                  </mapping>
+                  <deadzone low="-1.00000" center-low="0.00000" center-high="0.00000" high="1.00000"/>
+                </curve-data>
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
                   <client client-name="Any" selected="True"/>
                 </remote-config>
@@ -949,16 +1022,9 @@
             </action-set>
           </container>
         </axis>
-        <axis id="2" description="?? Right Brake Pedal">
+        <axis id="2" description="?? Left Brake Pedal">
           <container container_id="51c7e1be92e9437590e7df26fec85afa" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="89ab91df1c5140b9b3a4dfbd36002013"/>
-            <action-set>
-              <vjoyremap vjoy="2" axis="5" mode="VJoyAxis" exec_on_press="True" exec_on_release="False" sync-mode="0" axis-type="absolute" axis-scaling="1.00000000" axis_start_value="0.00000000" range_low="-1.00000000" range_high="1.00000000" output_range_low="-1.00000000" output_range_high="1.00000000" reverse="False" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="5" action_id="7c3b184b8fe946c69e6977511e96560f" priority="9">
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
-                  <client client-name="Any" selected="True"/>
-                </remote-config>
-              </vjoyremap>
-            </action-set>
           </container>
         </axis>
         <axis id="3" description="Yaw Pedals">
@@ -1075,7 +1141,6 @@
     <input-filter>
       <device id="9ff2d4b00f0511f08003444553540000" name="T-Pendular-Rudder"/>
       <filter device="9ff2d4b00f0511f08003444553540000" type="axis" id="1" filter="False"/>
-      <filter device="9ff2d4b00f0511f08003444553540000" type="axis" id="2" filter="False"/>
       <filter device="9ff2d4b00f0511f08003444553540000" type="axis" id="3" filter="False"/>
       <device id="702d2f9006db11f18009444553540000" name="VPC VMAX Prime Throttle"/>
       <filter device="702d2f9006db11f18009444553540000" type="axis" id="1" filter="False"/>
@@ -1136,44 +1201,44 @@
       <filter device="702d2f9006db11f18009444553540000" type="button" id="49" filter="False"/>
       <filter device="702d2f9006db11f18009444553540000" type="button" id="50" filter="False"/>
       <filter device="702d2f9006db11f18009444553540000" type="button" id="51" filter="False"/>
-      <device id="0000284006df11f1800d444553540000" name="RIGHT VPC Stick MT-50CM3"/>
-      <filter device="0000284006df11f1800d444553540000" type="axis" id="1" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="axis" id="2" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="axis" id="4" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="axis" id="5" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="axis" id="7" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="1" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="2" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="3" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="4" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="5" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="6" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="7" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="8" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="9" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="10" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="11" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="12" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="13" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="14" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="15" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="16" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="17" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="18" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="19" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="20" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="21" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="22" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="23" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="24" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="25" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="26" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="27" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="28" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="29" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="30" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="31" filter="False"/>
-      <filter device="0000284006df11f1800d444553540000" type="button" id="32" filter="False"/>
+      <device id="00004f5006df11f1800e444553540000" name="RIGHT VPC Stick MT-50CM3"/>
+      <filter device="00004f5006df11f1800e444553540000" type="axis" id="1" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="axis" id="2" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="axis" id="4" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="axis" id="5" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="axis" id="7" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="1" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="2" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="3" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="4" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="5" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="6" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="7" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="8" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="9" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="10" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="11" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="12" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="13" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="14" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="15" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="16" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="17" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="18" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="19" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="20" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="21" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="22" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="23" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="24" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="25" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="26" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="27" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="28" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="29" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="30" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="31" filter="False"/>
+      <filter device="00004f5006df11f1800e444553540000" type="button" id="32" filter="False"/>
       <device id="576a611058f411f18001444553540000" name="VPC Panel #2"/>
       <filter device="576a611058f411f18001444553540000" type="button" id="1" filter="False"/>
       <filter device="576a611058f411f18001444553540000" type="button" id="2" filter="False"/>
@@ -1217,6 +1282,7 @@
       <filter device="576a611058f411f18001444553540000" type="button" id="40" filter="False"/>
       <filter device="576a611058f411f18001444553540000" type="button" id="41" filter="False"/>
       <filter device="576a611058f411f18001444553540000" type="button" id="42" filter="False"/>
+      <device id="cccd7ae018bd11f18003444553540000" name="VJoy 8/32/0 (1)"/>
       <device id="86b5bfe0bfc611eb8001444553540000" name="Controller (Xbox One For Windows)"/>
     </input-filter>
   </settings>
@@ -1302,11 +1368,17 @@
             </remote-config>
           </run-process>
           <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;025B&#10;02&#10;40&#10;00&#10;00" line_per_arg="True" exec_on_release="True" action_id="392518d196a34c9ca2a763bd608b3789" comment="RED LED (BUTTON)" priority="5">
+            <activation-condition rule="all" condition_id="b6fe99ab01c0418f8956db564db582f7">
+              <condition condition_id="2640dcdc28e94010b84855d11ad92818" delay="0.00000000" comparison="pressed" condition-type="state" key="is_hardpoint_deployed" ignore-release="False" description="This state is a mirror of Status.json. Actions do NOT update the state"/>
+            </activation-condition>
             <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
               <client client-name="Any" selected="True"/>
             </remote-config>
           </run-process>
           <run-process process="C:/Program Files (x86)/VPC Software Suite/tools/VPC_LED_Control.exe" args="3344&#10;025B&#10;02&#10;00&#10;40&#10;00" line_per_arg="True" exec_on_release="True" action_id="a61919c9c91c49e9ba498c70689d6595" comment="GREEN LED (BUTTON)" priority="5">
+            <activation-condition rule="all" condition_id="7532fb2818e2405a87cb35ef9e8ba879">
+              <condition condition_id="352e4fe83a904ee89917f43713400338" delay="0.00000000" comparison="released" condition-type="state" key="is_hardpoint_deployed" ignore-release="False" description="This state is a mirror of Status.json. Actions do NOT update the state"/>
+            </activation-condition>
             <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
               <client client-name="Any" selected="True"/>
             </remote-config>
