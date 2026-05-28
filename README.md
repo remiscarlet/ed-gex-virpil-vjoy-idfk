@@ -12,6 +12,7 @@ I have no idea what I'm doing whoo
 Hardware:
 - VPC Alpha Prime R
 - VPC VMAX Prime
+- VPC Control Panel #2
 - TM TPR 
 
 Something something inspired by Aussiedroid.

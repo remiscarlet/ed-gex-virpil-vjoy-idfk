@@ -10,11 +10,34 @@ REQUIRED SETUP
 1. Drop this file in the same folder as your GEX profile (.xml).
 2. Attach it via the profile's Plugins tab.
 3. In the State tab of the profile, create a boolean state with the exact
-   name (no spaces, lower case) of every key in STATE_FLAG_MAP below.
-   This plugin will not auto-create them; create-from-plugin at runtime
-   is fragile and you'll want to bind to these in the UI anyway.
+   name (no spaces, lower case) of every key in STATE_FLAG_MAP and
+   STATE_VALUE_RULES below. This plugin will not auto-create them;
+   create-from-plugin at runtime is fragile and you'll want to bind to
+   these in the UI anyway.
 
-To expose more Status.json flags, just add entries to STATE_FLAG_MAP.
+TWO WAYS TO DERIVE A STATE
+--------------------------
+GEX states are boolean (on/off). This plugin builds that boolean two ways:
+
+- STATE_FLAG_MAP: state ON when a bit is set in Status.json "Flags".
+  Use this for the many on/off conditions Elite already exposes as flags
+  (gear, scoop, silent running, shields up, overheating, ...).
+
+- STATE_VALUE_RULES: state ON when a numeric field from Status.json meets
+  a threshold you define, e.g. "weapons capacitor fully pipped" or
+  "fuel reservoir nearly empty". Each rule is a small predicate function
+  that receives the parsed Status.json dict and returns a bool.
+
+NOT AVAILABLE IN Status.json (so they cannot be synced):
+- Numeric heat level: Elite exports no heat percentage. The only heat
+  signal is the "Over Heating (>100%)" flag, included below as
+  is_overheating.
+- Numeric shield level: only the boolean "Shields Up" flag exists
+  (is_shields_up). There is no shield strength percentage.
+- "Locked on by target": no such flag. The nearest combat-awareness
+  signal is IsInDanger (commented out below) but it is not the same thing.
+- Orbital lines / rotational correction: these are HUD/flight settings
+  that Elite does not write to Status.json.
 
 DESIGN NOTES
 ------------
@@ -26,6 +49,10 @@ DESIGN NOTES
   happened to import the module.
 - Every Qt slot has a top-level try/except. An exception escaping a slot
   on some PySide6 builds will take the host down.
+- States are re-asserted on every poll, not only when Status.json changes.
+  GEX resets states to their default on profile activation, so the plugin
+  has to continuously drive them or the default wins. setValue() no-ops
+  when unchanged, so this does not spam events.
 """
 
 from __future__ import annotations
@@ -33,6 +60,7 @@ from __future__ import annotations
 import json
 import logging
 import time
+from collections.abc import Callable
 from pathlib import Path
 
 from PySide6 import QtCore
@@ -55,14 +83,64 @@ ELITE_JOURNAL_LOCATION = (
 POLL_INTERVAL_MS = 250
 STATUS_STALE_SECONDS = 10.0
 
-# Map of GEX state name -> Elite Dangerous Status.json Flags bitmask.
-# Each key must exist as a boolean state in the profile's State tab.
-# Add more entries to expose additional flags; the rest of the plugin
-# adapts automatically. Bit values are from the ED Player Journal docs.
+# Map of GEX state name -> Elite Dangerous Status.json "Flags" bitmask.
+# State is ON when (Flags & mask) != 0. Each key must exist as a boolean
+# state in the profile's State tab. Bit values are from the ED Player
+# Journal docs (Status File page).
 STATE_FLAG_MAP: dict[str, int] = {
-    "is_cargo_scoop_down":   0x00000200,  # Cargo Scoop Deployed
-    "is_landing_gear_down":  0x00000004,  # Landing Gear Down
-    "is_hardpoint_deployed": 0x00000040,  # Hardpoints Deployed
+    "is_cargo_scoop_down":   0x00000200,  # bit  9: Cargo Scoop Deployed
+    "is_landing_gear_down":  0x00000004,  # bit  2: Landing Gear Down
+    "is_hardpoint_deployed": 0x00000040,  # bit  6: Hardpoints Deployed
+    "is_silent_running":     0x00000400,  # bit 10: Silent Running
+    "is_shields_up":         0x00000008,  # bit  3: Shields Up (boolean only)
+    "is_overheating":        0x00100000,  # bit 20: Over Heating (> 100%)
+    "is_light_on":           0x00000100,  # bit  8: Lights On
+    "is_night_vision_on":    0x10000000,  # bit 28: Night Vision
+
+    # No flag means "locked on / scanned by target". IsInDanger is the
+    # closest combat-awareness signal (set when in a danger zone), but it
+    # is NOT the same as being targeted. Uncomment if you want it anyway,
+    # and create a matching "is_in_danger" state.
+    # "is_in_danger":        0x00400000,  # bit 22: IsInDanger
+}
+
+
+# GuiFocus values (which GUI screen is active). Not a bitmask -- it's a
+# single integer in Status.json. Used by value rules below.
+GUI_FOCUS_NO_FOCUS = 0
+GUI_FOCUS_GALAXY_MAP = 6
+GUI_FOCUS_SYSTEM_MAP = 7
+GUI_FOCUS_ORRERY = 8
+GUI_FOCUS_FSS = 9   # Full Spectrum System scanner
+GUI_FOCUS_SAA = 10  # Detailed Surface Scanner / SAA
+GUI_FOCUS_CODEX = 11
+
+
+# Map of GEX state name -> predicate(payload) -> bool.
+# State is ON when the predicate returns True. Use this for anything that
+# isn't a simple Flags bit: numeric thresholds, or non-bitmask integer
+# fields like GuiFocus. The predicate receives the full parsed Status.json
+# dict; keep it cheap and defensive (a field may be absent, e.g. on-foot
+# fields only appear on foot). Each key must exist as a boolean state in
+# the profile's State tab.
+STATE_VALUE_RULES: dict[str, Callable[[dict], bool]] = {
+    # FSS scanner open. GuiFocus is an integer screen id, not a flag bit,
+    # so it can't live in STATE_FLAG_MAP.
+    "is_fss_mode": lambda p: p.get("GuiFocus") == GUI_FOCUS_FSS,
+
+    # ---- more examples (uncomment + create matching states to use) -------
+    # Weapons capacitor fully pipped. Pips are half-pips [sys, eng, wep],
+    # 0..8, so 8 == 4 pips.
+    # "is_weapons_full_pips": lambda p: (p.get("Pips") or [0, 0, 0])[2] >= 8,
+
+    # Fuel reservoir nearly dry (active reservoir tank, in tons).
+    # "is_reservoir_low": lambda p: (p.get("Fuel") or {}).get("FuelReservoir", 1.0) < 0.1,
+
+    # On-foot oxygen below 25% (Oxygen is 0.0..1.0, only present on foot).
+    # "is_oxygen_low": lambda p: p.get("Oxygen", 1.0) < 0.25,
+
+    # On-foot health below half.
+    # "is_health_low": lambda p: p.get("Health", 1.0) < 0.5,
 }
 
 
@@ -82,6 +160,14 @@ class EliteDangerousStatusSync(QtCore.QObject):
         self._last_error: str | None = None
         self._hooked = False
         self._warned_missing_states: set[str] = set()
+
+        # Cache of the values we want the states to hold, recomputed only
+        # when Status.json changes but RE-ASSERTED into the states on every
+        # poll. See _assert_desired for why.
+        self._desired: dict[str, bool] = {}
+        # Force the first assert after each activation so it overrides
+        # whatever default GEX initialised the states to.
+        self._force_next_assert = False
 
         try:
             el = gremlin.event_handler.EventListener()
@@ -138,15 +224,55 @@ class EliteDangerousStatusSync(QtCore.QObject):
         except Exception:
             self._log_once(f"ED status sync: failed to set state '{key}'")
 
-    def _apply_flags(self, flags: int, force: bool = False) -> None:
-        """Write each configured state from its bit in the flags int."""
-        for state_name, mask in STATE_FLAG_MAP.items():
-            self._set_state(state_name, bool(flags & mask), force=force)
+    def _all_state_names(self):
+        """Every state this plugin manages, across both config maps."""
+        return (*STATE_FLAG_MAP.keys(), *STATE_VALUE_RULES.keys())
+
+    def _compute_desired(self, payload: dict) -> dict[str, bool]:
+        """Build the full {state_name: bool} map from a Status.json payload."""
+        try:
+            flags = int(payload.get("Flags", 0))
+        except (TypeError, ValueError):
+            flags = 0
+
+        desired: dict[str, bool] = {
+            name: bool(flags & mask) for name, mask in STATE_FLAG_MAP.items()
+        }
+        for name, predicate in STATE_VALUE_RULES.items():
+            try:
+                desired[name] = bool(predicate(payload))
+            except Exception:
+                # A bad/inapplicable rule (e.g. on-foot field while flying)
+                # must not break the others or the poll loop.
+                self._log_once(
+                    f"ED status sync: value rule '{name}' raised; "
+                    "treating as False"
+                )
+                desired[name] = False
+        return desired
+
+    def _assert_desired(self, force: bool = False) -> None:
+        """Write the cached desired values into the GEX states.
+
+        Called on EVERY poll, not just when Status.json changes. GremlinEx
+        resets states to their configured default when a profile is
+        activated, so the plugin must continuously re-assert ownership;
+        gating writes on file-change alone lets that default clobber our
+        value until the file next happens to change (which, sitting still
+        in e.g. FSS, may be never).
+
+        setValue() compares against the state's current value and no-ops
+        when unchanged, so steady-state re-asserting does not spam
+        state-change events. force=True bypasses that and is used once
+        right after activation to guarantee an authoritative initial write.
+        """
+        for name, value in self._desired.items():
+            self._set_state(name, value, force=force)
 
     def _clear_states(self, force: bool = False) -> None:
-        """Set every configured state to False (file missing, stale, stop)."""
-        for state_name in STATE_FLAG_MAP:
-            self._set_state(state_name, False, force=force)
+        """Set every managed state to False (file missing, stale, stop)."""
+        self._desired = {name: False for name in self._all_state_names()}
+        self._assert_desired(force=force)
 
     # ---- profile lifecycle slots -----------------------------------------
 
@@ -172,8 +298,10 @@ class EliteDangerousStatusSync(QtCore.QObject):
             self._hooked = True
             syslog.info(f"ED status sync: watching [{self._status_path}]")
 
-            # First poll synchronously so states are correct before the
-            # user's first input frame.
+            # Force the first assert so it wins over the default values GEX
+            # has just initialised the states to. The regular timer then
+            # keeps re-asserting (unforced) to heal any later reset.
+            self._force_next_assert = True
             self._poll_status()
             self._timer.start()
         except Exception:
@@ -244,22 +372,23 @@ class EliteDangerousStatusSync(QtCore.QObject):
                 self._clear_states()
                 return
 
-            if signature == self._last_signature:
-                return
+            # Re-read/parse only when the file actually changed; this gates
+            # the comparatively expensive IO + JSON work, not the writes.
+            if signature != self._last_signature:
+                payload = self._read_status_json(path)
+                if payload is not None:
+                    self._clear_error()
+                    self._last_signature = signature
+                    self._desired = self._compute_desired(payload)
+                # If payload is None (Elite mid-write), keep the previous
+                # desired values and retry on the next tick.
 
-            payload = self._read_status_json(path)
-            if payload is None:
-                return
-
-            self._clear_error()
-            self._last_signature = signature
-
-            try:
-                flags = int(payload.get("Flags", 0))
-            except (TypeError, ValueError):
-                flags = 0
-
-            self._apply_flags(flags)
+            # Assert every tick, even when the file is unchanged, so that a
+            # GremlinEx default-reset on (re)activation is corrected within
+            # one poll interval instead of staying stuck until the file
+            # next changes.
+            self._assert_desired(force=self._force_next_assert)
+            self._force_next_assert = False
         except Exception:
             # Top-level guard: never let an exception escape a Qt slot.
             syslog.exception("ED status sync: poll iteration failed")

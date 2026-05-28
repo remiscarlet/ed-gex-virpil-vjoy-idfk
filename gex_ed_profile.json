@@ -1,12 +1,12 @@
 {
-    "last_device_guid": "576a611058f411f18001444553540000",
+    "last_device_guid": "702d2f9006db11f18009444553540000",
     "last_input": {
         "0000284006df11f1800d444553540000": [
             3,
             1
         ],
         "00004f5006df11f1800e444553540000": [
-            2,
+            3,
             4
         ],
         "576a611058f411f18001444553540000": [
@@ -15,11 +15,11 @@
         ],
         "702d2f9006db11f18009444553540000": [
             3,
-            39
+            45
         ],
         "72bbc0f431a84a41b528868dc7fcedfa": [
             11,
-            "299744a70a494bffbed3bb04442534d8"
+            "c7003553324c462eb867b21868a4620f"
         ],
         "86b5bfe0bfc611eb8001444553540000": [
             2,
@@ -42,11 +42,11 @@
             null
         ]
     },
-    "last_input_id": 7,
+    "last_input_id": 45,
     "last_input_type": "button",
     "selection_map": {
         "device_guid": {
-            "input_id": 7,
+            "input_id": 45,
             "input_type": "button"
         }
     }

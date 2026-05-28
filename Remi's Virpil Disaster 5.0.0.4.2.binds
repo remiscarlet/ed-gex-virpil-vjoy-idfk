@@ -1516,9 +1516,9 @@
 		<Secondary Device="Keyboard" Key="Key_F" />
 	</ExplorationFSSMiniZoomOut>
 	<ExplorationFSSRadioTuningX_Raw>
-		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_RXAxis" />
-		<Inverted Value="1" />
-		<Deadzone Value="0.03000000" />
+		<Binding Device="{NoDevice}" Key="" />
+		<Inverted Value="0" />
+		<Deadzone Value="0.00000000" />
 	</ExplorationFSSRadioTuningX_Raw>
 	<ExplorationFSSRadioTuningX_Increase>
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_8" />
@@ -1529,9 +1529,9 @@
 		<Secondary Device="Keyboard" Key="Key_Q" />
 	</ExplorationFSSRadioTuningX_Decrease>
 	<ExplorationFSSRadioTuningAbsoluteX>
-		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_ZAxis" />
+		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_UAxis" />
 		<Inverted Value="1" />
-		<Deadzone Value="0.08000001" />
+		<Deadzone Value="0.00000000" />
 	</ExplorationFSSRadioTuningAbsoluteX>
 	<FSSTuningSensitivity Value="0.19900000" />
 	<ExplorationFSSDiscoveryScan>
