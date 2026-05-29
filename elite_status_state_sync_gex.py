@@ -83,6 +83,12 @@ ELITE_JOURNAL_LOCATION = (
 POLL_INTERVAL_MS = 250
 STATUS_STALE_SECONDS = 10.0
 
+# Diagnostic: when True, every change to a managed state is logged at INFO
+# with the triggering Flags integer and the payload's timestamp. Use this
+# if you see oscillation to identify whether the source is the file
+# content itself or something downstream. Leave False in normal use.
+DEBUG_LOG_STATE_CHANGES = False
+
 # Map of GEX state name -> Elite Dangerous Status.json "Flags" bitmask.
 # State is ON when (Flags & mask) != 0. Each key must exist as a boolean
 # state in the profile's State tab. Bit values are from the ED Player
@@ -96,6 +102,7 @@ STATE_FLAG_MAP: dict[str, int] = {
     "is_overheating":        0x00100000,  # bit 20: Over Heating (> 100%)
     "is_light_on":           0x00000100,  # bit  8: Lights On
     "is_night_vision_on":    0x10000000,  # bit 28: Night Vision
+    "is_analysis_mode":      0x08000000,  # bit 27: Hud in Analysis mode
 
     # No flag means "locked on / scanned by target". IsInDanger is the
     # closest combat-awareness signal (set when in a danger zone), but it
@@ -168,6 +175,11 @@ class EliteDangerousStatusSync(QtCore.QObject):
         # Force the first assert after each activation so it overrides
         # whatever default GEX initialised the states to.
         self._force_next_assert = False
+        # Timestamp of the last poll where we either successfully refreshed
+        # from Status.json or confirmed the cached signature is still
+        # current. Used to decide when to give up and clear states. None
+        # means "never had a good read yet" and counts as stale.
+        self._last_good_read_time: float | None = None
 
         try:
             el = gremlin.event_handler.EventListener()
@@ -284,6 +296,7 @@ class EliteDangerousStatusSync(QtCore.QObject):
         try:
             self._status_path = self._resolve_status_path()
             self._last_signature = None
+            self._last_good_read_time = None
             self._clear_error()
             self._warned_missing_states.clear()
 
@@ -342,51 +355,105 @@ class EliteDangerousStatusSync(QtCore.QObject):
         except OSError:
             return True
 
+    def _try_refresh_desired(self, path: Path) -> bool:
+        """Attempt to update self._desired from Status.json.
+
+        Returns True if we either parsed a fresh payload OR confirmed the
+        cached signature is still current and the file is not mtime-stale.
+        Returns False on any transient or persistent failure (missing,
+        locked, mid-write, stale). Callers should NOT clear state on a
+        False return -- _poll_status handles that based on how long we've
+        been without a successful read.
+        """
+        if not path.exists():
+            self._log_once(
+                f"ED status sync: Status.json not found at [{path}]"
+            )
+            return False
+
+        if self._is_stale(path):
+            self._log_once(
+                f"ED status sync: Status.json older than "
+                f"{STATUS_STALE_SECONDS:.0f}s; treating as inactive"
+            )
+            return False
+
+        try:
+            stat = path.stat()
+            signature = (stat.st_mtime_ns, stat.st_size)
+        except OSError as exc:
+            self._log_once(f"ED status sync: stat failed on [{path}]: {exc}")
+            return False
+
+        if signature == self._last_signature:
+            # File is live and unchanged since our last successful read,
+            # so cached _desired is still current. This counts as a good
+            # read for staleness purposes.
+            return True
+
+        payload = self._read_status_json(path)
+        if payload is None:
+            # Elite likely mid-write; retry on the next tick. NOT a good
+            # read -- but also not yet a reason to clear state, since
+            # we'll almost certainly succeed on the next poll.
+            return False
+
+        # Reject structurally-valid-but-incomplete writes. Elite has been
+        # observed to briefly produce a JSON document that parses cleanly
+        # but is missing "Flags" (a stub written before fields are filled
+        # in). Without this guard, payload.get("Flags", 0) returns 0 and
+        # EVERY flag-derived state goes False for that one tick -- which
+        # looks exactly like the oscillation you'd see at the 4Hz poll.
+        if not isinstance(payload, dict) or "Flags" not in payload:
+            self._log_once(
+                "ED status sync: Status.json parsed but missing 'Flags'; "
+                "treating as a partial write and holding last values"
+            )
+            return False
+
+        self._clear_error()
+        self._last_signature = signature
+        new_desired = self._compute_desired(payload)
+
+        if DEBUG_LOG_STATE_CHANGES:
+            for name, value in new_desired.items():
+                if self._desired.get(name) != value:
+                    syslog.info(
+                        f"ED state change: {name} {self._desired.get(name)!r}"
+                        f" -> {value!r}  (Flags=0x{int(payload.get('Flags', 0)):08X}"
+                        f", ts={payload.get('timestamp')!r})"
+                    )
+
+        self._desired = new_desired
+        return True
+
     @QtCore.Slot()
     def _poll_status(self) -> None:
         if not self._hooked:
             return
         try:
             path = self._status_path or self._resolve_status_path()
+            now = time.time()
 
-            if not path.exists():
-                self._log_once(
-                    f"ED status sync: Status.json not found at [{path}]"
-                )
-                self._clear_states()
-                return
+            # Attempt to refresh from the file. Transient failures (file
+            # briefly missing during Elite's rewrite, stat() racing the
+            # write, partial JSON) deliberately do NOT clobber state --
+            # they would otherwise cause visible flicker at the 4Hz poll
+            # rate, because Elite is writing Status.json constantly.
+            if self._try_refresh_desired(path):
+                self._last_good_read_time = now
 
-            if self._is_stale(path):
-                self._log_once(
-                    f"ED status sync: Status.json older than "
-                    f"{STATUS_STALE_SECONDS:.0f}s; treating as inactive"
-                )
-                self._clear_states()
-                return
+            # Only clear if we've gone a full stale-window without any
+            # successful read. That covers Elite not running, a wrong
+            # path, or Elite quitting while the profile is active.
+            if (
+                self._last_good_read_time is None
+                or now - self._last_good_read_time > STATUS_STALE_SECONDS
+            ):
+                self._desired = {
+                    name: False for name in self._all_state_names()
+                }
 
-            try:
-                stat = path.stat()
-                signature = (stat.st_mtime_ns, stat.st_size)
-            except OSError as exc:
-                self._log_once(f"ED status sync: stat failed on [{path}]: {exc}")
-                self._clear_states()
-                return
-
-            # Re-read/parse only when the file actually changed; this gates
-            # the comparatively expensive IO + JSON work, not the writes.
-            if signature != self._last_signature:
-                payload = self._read_status_json(path)
-                if payload is not None:
-                    self._clear_error()
-                    self._last_signature = signature
-                    self._desired = self._compute_desired(payload)
-                # If payload is None (Elite mid-write), keep the previous
-                # desired values and retry on the next tick.
-
-            # Assert every tick, even when the file is unchanged, so that a
-            # GremlinEx default-reset on (re)activation is corrected within
-            # one poll interval instead of staying stuck until the file
-            # next changes.
             self._assert_desired(force=self._force_next_assert)
             self._force_next_assert = False
         except Exception:
