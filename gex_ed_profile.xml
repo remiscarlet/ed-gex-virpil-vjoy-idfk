@@ -312,6 +312,22 @@
             <activation-condition rule="all" condition_id="2c52d521dd044968908c44c9f539c4a1"/>
             <action-set>
               <vjoyremap vjoy="1" button="2" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="2" action_id="ed17f3851fe942d1ac64507ce3eaf1d4" priority="9">
+                <activation-condition rule="all" condition_id="033a4ae100f94ffdaa56dd68424e5489">
+                  <condition condition_id="b25b03a28d1c4fcc95ace69c20b11e05" delay="0.00000000" comparison="released" condition-type="state" key="is_fss_mode" ignore-release="False"/>
+                </activation-condition>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </vjoyremap>
+            </action-set>
+          </container>
+          <container container_id="22a019ef0e304b2792412c0d6528c8b9" comment="Zoom Out (FSS Mode)" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="c70601606c66493caf0e81a30ac89dfa"/>
+            <action-set>
+              <vjoyremap vjoy="1" button="17" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="17" action_id="bd28e22bd1f248969ca5b06dc3a123f6" priority="9">
+                <activation-condition rule="all" condition_id="6dcf76d0032b42808ce022689acac562">
+                  <condition condition_id="4ff40e249fee46b2bfcb14ea3eb78e5f" delay="0.00000000" comparison="pressed" condition-type="state" key="is_fss_mode" ignore-release="False"/>
+                </activation-condition>
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
                   <client client-name="Any" selected="True"/>
                 </remote-config>
@@ -324,6 +340,7 @@
             <activation-condition rule="all" condition_id="9981eb3f1d0f4b10b8d26d7821bc0d21">
               <condition condition_id="24ba9e9e63894b93ab56594b1d118adc" delay="0.00000000" comparison="released" condition-type="state" key="is_auto_pulse_armed" ignore-release="False"/>
               <condition condition_id="7c0978297f2c461290bdc8caabe25eef" delay="0.00000000" comparison="released" condition-type="joystick" input="button" id="32" device-guid="00004f5006df11f1800e444553540000" device-name="RIGHT VPC Stick MT-50CM3" range-low="0.00000000" range-high="0.00000000" ignore-release="False" use-calibrated="True"/>
+              <condition condition_id="da047c4ead7e48e98c0baa92cce7066d" delay="0.00000000" comparison="released" condition-type="state" key="is_fss_mode" ignore-release="False"/>
             </activation-condition>
             <action-set>
               <vjoyremap vjoy="1" button="1" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="1" action_id="98f7eb98ec584217b5969716298829db" priority="9">
@@ -336,6 +353,7 @@
           <container container_id="88321c0758a44ecdadb31ae21da976d9" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="578ba128ad374f9d9886839dac0162db">
               <condition condition_id="dd8d1b475a1940188317ab1b5041f94c" delay="0.00000000" comparison="pressed" condition-type="state" key="is_auto_pulse_armed" ignore-release="False"/>
+              <condition condition_id="4d302df1a91b4b6ba5faa4167bb39689" delay="0.00000000" comparison="released" condition-type="state" key="is_fss_mode" ignore-release="False"/>
             </activation-condition>
             <action-set>
               <map_to_state key="is_auto_pulsing" state-id="79528a1bceab42d1a467c6ebf5672f6d" mode="press" delay="250" exec_on_press="True" exec_on_release="False" latch-delay="1000" sync-mode="0" default-reset="False" randomize-mode="False" randomize-weight="0.50000000" action_id="f95d99326e66485a98eb74ba0f4463c3" priority="5">
@@ -352,11 +370,29 @@
                 <activation-condition rule="all" condition_id="f2ad023f4fc2404f9aad0f08487e7599">
                   <condition condition_id="efbba079253d494f8ee684e42114e7f1" delay="0.00000000" comparison="pressed" condition-type="joystick" input="button" id="32" device-guid="00004f5006df11f1800e444553540000" device-name="RIGHT VPC Stick MT-50CM3" range-low="0.00000000" range-high="0.00000000" ignore-release="False" use-calibrated="True"/>
                   <condition condition_id="8a6d9d50c6aa4bacaf5ff41e7cdcbf4f" delay="0.00000000" comparison="released" condition-type="state" key="is_auto_pulse_armed" ignore-release="False"/>
+                  <condition condition_id="cedb4d0129414af9a2dc6fad7e8fac70" delay="0.00000000" comparison="released" condition-type="state" key="is_fss_mode" ignore-release="False"/>
                 </activation-condition>
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
                   <client client-name="Any" selected="True"/>
                 </remote-config>
               </vjoyremap>
+            </action-set>
+          </container>
+          <container container_id="8660980f03c246af88734cb5b606b1ff" comment="Zoom In (FSS Mode)" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="a0ba550348fd4adfb23f331cddcf0f78"/>
+            <action-set>
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="cbed6b7689cd4c0689bc35f936ee455c" priority="5">
+                <!--virtual: Left Shift 0xa0/160 scan code: 0x2a/42 extended: False-->
+                <key virtual-code="160" scan-code="42" extended="False" description="Left Shift"/>
+                <!--virtual: U 0x55/85 scan code: 0x16/22 extended: False-->
+                <key virtual-code="85" scan-code="22" extended="False" description="U"/>
+                <activation-condition rule="all" condition_id="9e8fe3d79738437888f0118c52d4f1eb">
+                  <condition condition_id="3588e88d75de4ad2906ec3b77fc36713" delay="0.00000000" comparison="pressed" condition-type="state" key="is_fss_mode" ignore-release="False"/>
+                </activation-condition>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </map-to-keyboard-ex>
             </action-set>
           </container>
         </button>
@@ -395,6 +431,16 @@
                   <client client-name="Any" selected="True"/>
                 </remote-config>
               </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
+        <button id="32" description="Modifier">
+          <container container_id="fc6195837eb2480d85c353326a958637" comment="Modifier" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="c5dbb25383cc4680924ad750958a936e"/>
+            <action-set>
+              <vjoyremap vjoy="1" button="4" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="4" action_id="45907c96840a45208d503f6f2483d21a" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </vjoyremap>
             </action-set>
           </container>
         </button>
@@ -598,7 +644,7 @@
             </action-set>
           </container>
         </button>
-        <button id="10">
+        <button id="10" description="Toggle Analysis/Combat Modes">
           <container container_id="828896f47c324b659652d435176519d0" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="b28f06cdfb6d4aeaa7d6907704e8efdf"/>
             <action-set>
@@ -760,6 +806,34 @@
             </action-set>
           </container>
         </button>
+        <button id="24" description="(DANGER) JETTISON CARGO">
+          <container container_id="21b9a5fdfc6d4cf586c6237c23f313e8" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="f10513c8c2994b948870a3ad45663aeb"/>
+            <action-set>
+              <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="5a76e525599d42eb9a47b2bdb3d80a0a" priority="5">
+                <!--virtual: Left Control 0xa2/162 scan code: 0x1d/29 extended: False-->
+                <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
+                <!--virtual: Numpad - 0x6d/109 scan code: 0x4a/74 extended: False-->
+                <key virtual-code="109" scan-code="74" extended="False" description="Numpad -"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
+        <button id="26" description="Dismiss/Recall Ship">
+          <container container_id="9ace250cc4b7442f93bb5bdbe318be37" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="4f0d9f8c049b40b7b78baed5eb8306f8"/>
+            <action-set>
+              <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="745d099e266444468d9f8447a6d5eab2" priority="5">
+                <!--virtual: Left Control 0xa2/162 scan code: 0x1d/29 extended: False-->
+                <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
+                <!--virtual: Numpad * 0x6a/106 scan code: 0x37/55 extended: False-->
+                <key virtual-code="106" scan-code="55" extended="False" description="Numpad *"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
       </mode>
     </device>
     <device name="VPC VMAX Prime Throttle" label="" device-guid="702d2f9006db11f18009444553540000" type="joystick">
@@ -846,7 +920,7 @@
                       </action_containers>
                     </gate>
                     <!--Range: [-0.98000,0.98000]  Gates: [0/1] Condition: [In Range] Mode: [Normal]-->
-                    <range delay="250" condition="in_range" mode="normal" id="c3e96938770e4bdfa721ba3caccac70b" min_id="9547aa1d43824ce88864ac7b55e94cd0" max_id="c1db81083e054f1ab85e007276688c77"/>
+                    <range delay="250" condition="in_range" mode="normal" id="5a826ac1090f46f0b05d310c05fc3502" min_id="9547aa1d43824ce88864ac7b55e94cd0" max_id="c1db81083e054f1ab85e007276688c77"/>
                     <filter value="True" ranged_value="True" value_in_range="True" value_out_of_range="True" gate_crossed="True" gate_decrease="True" gate_increase="True" fixed_value="True" range_enter="True" range_exit="True" range_hold="True"/>
                   </gate>
                 </gates>
@@ -1208,11 +1282,13 @@
           <container container_id="e8a8feae14934e2ea087bbeb6b2ec634" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="2cbd43f0ae9f44d2a7833c4e9af19cf2"/>
             <action-set>
-              <vjoyremap vjoy="1" button="17" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="17" action_id="5e497aedd3854966b21ca3835fc0d206" priority="9">
+              <vjoyremap vjoy="1" button="17" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="17" action_id="5e497aedd3854966b21ca3835fc0d206" priority="9">
                 <activation-condition rule="all" condition_id="b85eeb8f6d624fbbb2cedb97a9ba6b85">
                   <condition condition_id="79213b74e38a4cb6b34cb84e1c50e840" delay="0.00000000" comparison="pressed" condition-type="state" key="is_fss_mode" ignore-release="False"/>
                 </activation-condition>
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
               </vjoyremap>
             </action-set>
           </container>
@@ -1371,7 +1447,7 @@
     </device>
     <device name="T-Pendular-Rudder" label="" device-guid="9ff2d4b00f0511f08003444553540000" type="joystick">
       <mode name="Default">
-        <axis id="1" description="?? Right Brake Pedal">
+        <axis id="1" description="?? Right Brake Pedal" locked="True">
           <container container_id="a5b5b60d52ef41869bd14060baa49eb9" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="07f687d5e35e4149b52d357585b7758d"/>
             <action-set>

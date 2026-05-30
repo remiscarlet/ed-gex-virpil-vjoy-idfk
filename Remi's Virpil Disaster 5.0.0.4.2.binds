@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Root PresetName="Remi&apos;s Virpil Disaster 5.0.0" MajorVersion="4" MinorVersion="2">
-	<KeyboardLayout>ja-JP</KeyboardLayout>
+	<KeyboardLayout>en-US</KeyboardLayout>
 	<MouseXMode Value="" />
 	<MouseXDecay Value="0" />
 	<MouseYMode Value="" />
@@ -809,7 +809,7 @@
 	<SteeringAxis>
 		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_XAxis" />
 		<Inverted Value="0" />
-		<Deadzone Value="0.04000000" />
+		<Deadzone Value="0.00000000" />
 	</SteeringAxis>
 	<SteerLeftButton>
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_25" />
@@ -820,9 +820,9 @@
 		<Secondary Device="Keyboard" Key="Key_D" />
 	</SteerRightButton>
 	<BuggyRollAxisRaw>
-		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_XAxis" />
+		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_ZAxis" />
 		<Inverted Value="0" />
-		<Deadzone Value="0.01000000" />
+		<Deadzone Value="0.00000000" />
 	</BuggyRollAxisRaw>
 	<BuggyRollLeftButton>
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_23">
@@ -850,7 +850,7 @@
 		<Secondary Device="Keyboard" Key="Key_S" />
 	</BuggyPitchDownButton>
 	<VerticalThrustersButton>
-		<Primary Device="{NoDevice}" Key="" />
+		<Primary Device="vJoy" DeviceIndex="1" Key="Neg_Joy_RYAxis" />
 		<Secondary Device="Keyboard" Key="Key_O" />
 		<ToggleOn Value="0" />
 	</VerticalThrustersButton>
@@ -863,46 +863,40 @@
 		<Secondary Device="Mouse" Key="Mouse_2" />
 	</BuggySecondaryFireButton>
 	<AutoBreakBuggyButton>
-		<Primary Device="{NoDevice}" Key="" />
+		<Primary Device="vJoy" DeviceIndex="1" Key="Pos_Joy_UAxis" />
 		<Secondary Device="Keyboard" Key="Key_Minus">
 			<Modifier Device="Keyboard" Key="Key_LeftControl" />
 		</Secondary>
 		<ToggleOn Value="1" />
 	</AutoBreakBuggyButton>
 	<HeadlightsBuggyButton>
-		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="Keyboard" Key="Key_Insert" />
+		<Primary Device="Keyboard" Key="Key_Insert" />
+		<Secondary Device="{NoDevice}" Key="" />
 	</HeadlightsBuggyButton>
 	<ToggleBuggyTurretButton>
-		<Primary Device="Keyboard" Key="Key_U">
-			<Modifier Device="Keyboard" Key="Key_LeftShift" />
-		</Primary>
-		<Secondary Device="Keyboard" Key="Key_U" />
+		<Primary Device="Keyboard" Key="Key_U" />
+		<Secondary Device="{NoDevice}" Key="" />
 	</ToggleBuggyTurretButton>
 	<BuggyCycleFireGroupNext>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_16">
-			<Modifier Device="vJoy" DeviceIndex="1" Key="Joy_4" />
-		</Primary>
-		<Secondary Device="Keyboard" Key="Key_Period" />
+		<Primary Device="Keyboard" Key="Key_Period" />
+		<Secondary Device="{NoDevice}" Key="" />
 	</BuggyCycleFireGroupNext>
 	<BuggyCycleFireGroupPrevious>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_18">
-			<Modifier Device="vJoy" DeviceIndex="1" Key="Joy_4" />
-		</Primary>
-		<Secondary Device="Keyboard" Key="Key_Comma" />
+		<Primary Device="Keyboard" Key="Key_Comma" />
+		<Secondary Device="{NoDevice}" Key="" />
 	</BuggyCycleFireGroupPrevious>
 	<SelectTarget_Buggy>
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_7" />
 		<Secondary Device="Keyboard" Key="Key_T" />
 	</SelectTarget_Buggy>
 	<MouseTurretXMode Value="" />
-	<MouseTurretXDecay Value="1" />
+	<MouseTurretXDecay Value="0" />
 	<MouseTurretYMode Value="" />
-	<MouseTurretYDecay Value="1" />
+	<MouseTurretYDecay Value="0" />
 	<BuggyTurretYawAxisRaw>
-		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_XAxis" />
+		<Binding Device="vJoy" DeviceIndex="0" Key="Joy_XAxis" />
 		<Inverted Value="0" />
-		<Deadzone Value="0.03000000" />
+		<Deadzone Value="0.00000000" />
 	</BuggyTurretYawAxisRaw>
 	<BuggyTurretYawLeftButton>
 		<Primary Device="{NoDevice}" Key="" />
@@ -913,9 +907,9 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</BuggyTurretYawRightButton>
 	<BuggyTurretPitchAxisRaw>
-		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_YAxis" />
-		<Inverted Value="0" />
-		<Deadzone Value="0.03000000" />
+		<Binding Device="vJoy" DeviceIndex="0" Key="Joy_YAxis" />
+		<Inverted Value="1" />
+		<Deadzone Value="0.00000000" />
 	</BuggyTurretPitchAxisRaw>
 	<BuggyTurretPitchUpButton>
 		<Primary Device="{NoDevice}" Key="" />
@@ -929,8 +923,8 @@
 	<BuggyTurretMouseDeadzone Value="0.05000000" />
 	<BuggyTurretMouseLinearity Value="1.00000000" />
 	<DriveSpeedAxis>
-		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_ZAxis" />
-		<Inverted Value="1" />
+		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_RZAxis" />
+		<Inverted Value="0" />
 		<Deadzone Value="0.00000000" />
 	</DriveSpeedAxis>
 	<BuggyThrottleRange Value="" />
@@ -943,15 +937,15 @@
 	</BuggyToggleReverseThrottleInput>
 	<BuggyThrottleIncrement Value="0.00000000" />
 	<IncreaseSpeedButtonMax>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_28" />
+		<Primary Device="{NoDevice}" Key="" />
 		<Secondary Device="Keyboard" Key="Key_E" />
 	</IncreaseSpeedButtonMax>
 	<DecreaseSpeedButtonMax>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_30" />
+		<Primary Device="{NoDevice}" Key="" />
 		<Secondary Device="Keyboard" Key="Key_Q" />
 	</DecreaseSpeedButtonMax>
 	<IncreaseSpeedButtonPartial>
-		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_RYAxis" />
+		<Binding Device="vJoy" DeviceIndex="0" Key="Joy_RXAxis" />
 		<Inverted Value="0" />
 		<Deadzone Value="0.00000000" />
 	</IncreaseSpeedButtonPartial>
@@ -961,24 +955,24 @@
 		<Deadzone Value="0.00000000" />
 	</DecreaseSpeedButtonPartial>
 	<IncreaseEnginesPower_Buggy>
-		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="Keyboard" Key="Key_UpArrow" />
+		<Primary Device="Keyboard" Key="Key_UpArrow" />
+		<Secondary Device="{NoDevice}" Key="" />
 	</IncreaseEnginesPower_Buggy>
 	<IncreaseWeaponsPower_Buggy>
-		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="Keyboard" Key="Key_RightArrow" />
+		<Primary Device="Keyboard" Key="Key_RightArrow" />
+		<Secondary Device="{NoDevice}" Key="" />
 	</IncreaseWeaponsPower_Buggy>
 	<IncreaseSystemsPower_Buggy>
-		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="Keyboard" Key="Key_LeftArrow" />
+		<Primary Device="Keyboard" Key="Key_LeftArrow" />
+		<Secondary Device="{NoDevice}" Key="" />
 	</IncreaseSystemsPower_Buggy>
 	<ResetPowerDistribution_Buggy>
-		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="Keyboard" Key="Key_DownArrow" />
+		<Primary Device="Keyboard" Key="Key_DownArrow" />
+		<Secondary Device="{NoDevice}" Key="" />
 	</ResetPowerDistribution_Buggy>
 	<ToggleCargoScoop_Buggy>
-		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="Keyboard" Key="Key_Home" />
+		<Primary Device="Keyboard" Key="Key_Home" />
+		<Secondary Device="{NoDevice}" Key="" />
 		<ToggleOn Value="1" />
 	</ToggleCargoScoop_Buggy>
 	<EjectAllCargo_Buggy>
@@ -988,8 +982,10 @@
 		</Secondary>
 	</EjectAllCargo_Buggy>
 	<RecallDismissShip>
-		<Primary Device="Keyboard" Key="Key_C" />
-		<Secondary Device="Keyboard" Key="Key_V" />
+		<Primary Device="Keyboard" Key="Key_Numpad_Multiply">
+			<Modifier Device="Keyboard" Key="Key_LeftControl" />
+		</Primary>
+		<Secondary Device="{NoDevice}" Key="" />
 	</RecallDismissShip>
 	<EnableMenuGroupsSRV Value="0" />
 	<UIFocus_Buggy>
@@ -997,15 +993,11 @@
 		<Secondary Device="Keyboard" Key="Key_LeftShift" />
 	</UIFocus_Buggy>
 	<FocusLeftPanel_Buggy>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_27">
-			<Modifier Device="vJoy" DeviceIndex="1" Key="Joy_19" />
-		</Primary>
+		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_27" />
 		<Secondary Device="Keyboard" Key="Key_1" />
 	</FocusLeftPanel_Buggy>
 	<FocusCommsPanel_Buggy>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_28">
-			<Modifier Device="vJoy" DeviceIndex="1" Key="Joy_19" />
-		</Primary>
+		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_28" />
 		<Secondary Device="Keyboard" Key="Key_2" />
 	</FocusCommsPanel_Buggy>
 	<QuickCommsPanel_Buggy>
@@ -1013,21 +1005,17 @@
 		<Secondary Device="Keyboard" Key="Key_Enter" />
 	</QuickCommsPanel_Buggy>
 	<FocusRadarPanel_Buggy>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_30">
-			<Modifier Device="vJoy" DeviceIndex="1" Key="Joy_19" />
-		</Primary>
+		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_30" />
 		<Secondary Device="Keyboard" Key="Key_3" />
 	</FocusRadarPanel_Buggy>
 	<FocusRightPanel_Buggy>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_29">
-			<Modifier Device="vJoy" DeviceIndex="1" Key="Joy_19" />
-		</Primary>
+		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_29" />
 		<Secondary Device="Keyboard" Key="Key_4" />
 	</FocusRightPanel_Buggy>
 	<GalaxyMapOpen_Buggy>
 		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="Keyboard" Key="Key_SemiColon">
-			<Modifier Device="Keyboard" Key="Key_LeftShift" />
+		<Secondary Device="Keyboard" Key="Key_LeftShift">
+			<Modifier Device="Keyboard" Key="Key_SemiColon" />
 		</Secondary>
 	</GalaxyMapOpen_Buggy>
 	<SystemMapOpen_Buggy>
@@ -1572,7 +1560,7 @@
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_19">
 			<Modifier Device="vJoy" DeviceIndex="1" Key="Joy_4" />
 		</Primary>
-		<Secondary Device="Keyboard" Key="Key_Backspace" />
+		<Secondary Device="vJoy" DeviceIndex="1" Key="Joy_2" />
 	</ExplorationSAAExitThirdPerson>
 	<ExplorationSAANextGenus>
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_8" />
