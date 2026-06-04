@@ -438,8 +438,10 @@
           <container container_id="fc6195837eb2480d85c353326a958637" comment="Modifier" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="c5dbb25383cc4680924ad750958a936e"/>
             <action-set>
-              <vjoyremap vjoy="1" button="4" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="4" action_id="45907c96840a45208d503f6f2483d21a" priority="9">
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              <vjoyremap vjoy="1" button="4" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="4" action_id="45907c96840a45208d503f6f2483d21a" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
               </vjoyremap>
             </action-set>
           </container>
@@ -815,7 +817,9 @@
                 <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
                 <!--virtual: Numpad - 0x6d/109 scan code: 0x4a/74 extended: False-->
                 <key virtual-code="109" scan-code="74" extended="False" description="Numpad -"/>
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
               </map-to-keyboard-ex>
             </action-set>
           </container>
@@ -829,6 +833,92 @@
                 <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
                 <!--virtual: Numpad * 0x6a/106 scan code: 0x37/55 extended: False-->
                 <key virtual-code="106" scan-code="55" extended="False" description="Numpad *"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
+        <button id="32" description="Pitch Trim Down">
+          <container container_id="8759d9af1ed84a0596feea43946f66dd" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="1bfacb27025e46fe86bde3f293cfc738"/>
+            <action-set>
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="99a77eb3b9514038a0c67432b5114dda" priority="5">
+                <!--virtual: Left Control 0xa2/162 scan code: 0x1d/29 extended: False-->
+                <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
+                <!--virtual: Numpad 5 0x65/101 scan code: 0x4c/76 extended: False-->
+                <key virtual-code="101" scan-code="76" extended="False" description="Numpad 5"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
+        <button id="33" description="Pitch Trim Up">
+          <container container_id="eaf60d8bd9da441eae5c835fa63b9976" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="68e90d09291f48ab977e49af4c78e407"/>
+            <action-set>
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="79ee023f12494e3c84060fe3d70ac198" priority="5">
+                <!--virtual: Left Control 0xa2/162 scan code: 0x1d/29 extended: False-->
+                <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
+                <!--virtual: Numpad 8 0x68/104 scan code: 0x48/72 extended: False-->
+                <key virtual-code="104" scan-code="72" extended="False" description="Numpad 8"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
+        <button id="35" description="Roll Trim Left">
+          <container container_id="350af8d0b5f44eef808b9ef80f00058c" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="e25a8e77a7d2446ba380081febd5c10d"/>
+            <action-set>
+              <map-to-keyboard-ex mode="pulse" delay="75" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="3c5b3b18aeff44409a16acf7e5903549" priority="5">
+                <!--virtual: Left Control 0xa2/162 scan code: 0x1d/29 extended: False-->
+                <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
+                <!--virtual: Numpad 4 0x64/100 scan code: 0x4b/75 extended: False-->
+                <key virtual-code="100" scan-code="75" extended="False" description="Numpad 4"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
+        <button id="36" description="Roll Trim Right">
+          <container container_id="14a88c04718446ae9219f70068df9dde" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="ac254d29e99c4578a3dc792cccb7eb89"/>
+            <action-set>
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="1b4ecb333961476c9e53e985afebb830" priority="5">
+                <!--virtual: Left Control 0xa2/162 scan code: 0x1d/29 extended: False-->
+                <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
+                <!--virtual: Numpad 6 0x66/102 scan code: 0x4d/77 extended: False-->
+                <key virtual-code="102" scan-code="77" extended="False" description="Numpad 6"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
+        <button id="38" description="Yaw Trim Left">
+          <container container_id="17155fade30847868d470670450dc343" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="9befabae89704d799c4344ebb04823fc"/>
+            <action-set>
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="19e1344b0abf4a30a9f99ce20411bb48" priority="5">
+                <!--virtual: Left Control 0xa2/162 scan code: 0x1d/29 extended: False-->
+                <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
+                <!--virtual: Numpad 7 0x67/103 scan code: 0x47/71 extended: False-->
+                <key virtual-code="103" scan-code="71" extended="False" description="Numpad 7"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
+        <button id="39" description="Yaw Trim Right">
+          <container container_id="910ba32b01b14609a272fef655c7ae95" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="0725d3fd133749289f9103c95a41be94"/>
+            <action-set>
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="aba0b6d45f004c3a8f543e00fa0a4561" priority="5">
+                <!--virtual: Left Control 0xa2/162 scan code: 0x1d/29 extended: False-->
+                <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
+                <!--virtual: Numpad 9 0x69/105 scan code: 0x49/73 extended: False-->
+                <key virtual-code="105" scan-code="73" extended="False" description="Numpad 9"/>
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
               </map-to-keyboard-ex>
             </action-set>
@@ -878,7 +968,7 @@
                   <client client-name="Any" selected="True"/>
                 </remote-config>
               </vjoyremap>
-              <gated-axis action_id="5d21d7be4c164f05a0779134e71dc7eb" priority="5">
+              <gated-axis action_id="5d21d7be4c164f05a0779134e71dc7eb" priority="0">
                 <gates>
                   <gate show_mode="oneone">
                     <gate condition="cross_dec" value="-0.98000" id="9547aa1d43824ce88864ac7b55e94cd0" index="0" delay="250">
@@ -887,8 +977,8 @@
                           <activation-condition rule="all" condition_id="f0f65f20c3a04f1a9fd50a69cf8c9391"/>
                           <action-set>
                             <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="46b5f83b04b240f5bc6b9351766082ac" priority="5">
-                              <!--virtual: Numpad Delete 0x6e/110 scan code: 0x53/83 extended: False-->
-                              <key virtual-code="110" scan-code="83" extended="False" description="Numpad Delete"/>
+                              <!--virtual: Delete 0x2e/46 scan code: 0x53/83 extended: True-->
+                              <key virtual-code="46" scan-code="83" extended="True" description="Delete"/>
                               <activation-condition rule="all" condition_id="66fdc40ec6ed4ec4b72c5642be7c282f">
                                 <condition condition_id="4510aefffb4149658e266c2cdba6c2f0" delay="0.00000000" comparison="pressed" condition-type="joystick" input="button" id="32" device-guid="00004f5006df11f1800e444553540000" device-name="RIGHT VPC Stick MT-50CM3" range-low="0.00000000" range-high="0.00000000" ignore-release="False" use-calibrated="True"/>
                               </activation-condition>
@@ -906,8 +996,8 @@
                           <activation-condition rule="all" condition_id="8c792c324c4f4563971bb5aabcda68e3"/>
                           <action-set>
                             <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="3afe217c03a44b0590924a8786d3d472" priority="5">
-                              <!--virtual: Numpad Delete 0x6e/110 scan code: 0x53/83 extended: False-->
-                              <key virtual-code="110" scan-code="83" extended="False" description="Numpad Delete"/>
+                              <!--virtual: Delete 0x2e/46 scan code: 0x53/83 extended: True-->
+                              <key virtual-code="46" scan-code="83" extended="True" description="Delete"/>
                               <activation-condition rule="all" condition_id="c8992c7cacf04491889031c9f157dc9a">
                                 <condition condition_id="779d58fce2de433198824234fb4ad271" delay="0.00000000" comparison="pressed" condition-type="joystick" input="button" id="32" device-guid="00004f5006df11f1800e444553540000" device-name="RIGHT VPC Stick MT-50CM3" range-low="0.00000000" range-high="0.00000000" ignore-release="False" use-calibrated="True"/>
                               </activation-condition>
@@ -920,7 +1010,7 @@
                       </action_containers>
                     </gate>
                     <!--Range: [-0.98000,0.98000]  Gates: [0/1] Condition: [In Range] Mode: [Normal]-->
-                    <range delay="250" condition="in_range" mode="normal" id="5a826ac1090f46f0b05d310c05fc3502" min_id="9547aa1d43824ce88864ac7b55e94cd0" max_id="c1db81083e054f1ab85e007276688c77"/>
+                    <range delay="250" condition="in_range" mode="normal" id="bb1eefb0d22b4561bfb4cfd20408ab43" min_id="9547aa1d43824ce88864ac7b55e94cd0" max_id="c1db81083e054f1ab85e007276688c77"/>
                     <filter value="True" ranged_value="True" value_in_range="True" value_out_of_range="True" gate_crossed="True" gate_decrease="True" gate_increase="True" fixed_value="True" range_enter="True" range_exit="True" range_hold="True"/>
                   </gate>
                 </gates>
@@ -933,7 +1023,7 @@
         </axis>
         <axis id="5" description="Throttle (R)">
           <container container_id="d8b285888bad42cfb132e28315eae15a" collapsed="False" type="basic">
-            <virtual-button lower-limit="0.95" upper-limit="1.0" direction="below" enabled="True"/>
+            <virtual-button lower-limit="0.95" upper-limit="1.0" direction="below" enabled="False"/>
             <activation-condition rule="all" condition_id="32205238ac4e4de5a095d53882e7242d"/>
           </container>
         </axis>
@@ -1077,11 +1167,13 @@
             </action-set>
           </container>
         </button>
-        <button id="29" description="Friendship Drive">
+        <button id="29" description="Supercruise">
           <container container_id="3d6a1d20accb492bb12ee7731fd157fe" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="7ece0b6792ae4e98a1a736b5c669ae85"/>
             <action-set>
               <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="5ef722392c7f44db9088757ea61c93d6" priority="5">
+                <!--virtual: Left Control 0xa2/162 scan code: 0x1d/29 extended: False-->
+                <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
                 <!--virtual: Numpad Delete 0x6e/110 scan code: 0x53/83 extended: False-->
                 <key virtual-code="110" scan-code="83" extended="False" description="Numpad Delete"/>
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">

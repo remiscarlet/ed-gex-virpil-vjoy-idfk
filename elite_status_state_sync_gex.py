@@ -41,8 +41,12 @@ NOT AVAILABLE IN Status.json (so they cannot be synced):
 
 DESIGN NOTES
 ------------
-- Singleton via gremlin.singleton_decorator so re-imports do not stack
-  multiple timers / signal connections.
+- Reload-safe single-instance enforcement via a sentinel attribute on
+  EventListener (which is the only true app-wide singleton in GEX).
+  @SingletonDecorator alone is NOT enough -- it gets re-instantiated on
+  every module reload, which GEX does on each profile activation, so the
+  decorator version accumulated ~20 zombie instances over a normal play
+  session. See the bottom of the file for the actual guard.
 - Hooks only the documented profile_hook / profile_unhook signals.
 - QTimer is created lazily inside profile_hook, so it lives on the GEX
   runtime thread (which has a Qt event loop) rather than whatever thread
@@ -53,6 +57,9 @@ DESIGN NOTES
   GEX resets states to their default on profile activation, so the plugin
   has to continuously drive them or the default wins. setValue() no-ops
   when unchanged, so this does not spam events.
+- Status.json staleness threshold is generous (5 min) because Elite does
+  not heartbeat the file. During idle gameplay, real updates can be 30+
+  seconds apart; a tight threshold causes false-positive flicker.
 """
 
 from __future__ import annotations
@@ -66,7 +73,6 @@ from pathlib import Path
 from PySide6 import QtCore
 
 import gremlin.event_handler
-from gremlin.singleton_decorator import SingletonDecorator
 
 
 # ---------------------------------------------------------------------------
@@ -81,7 +87,14 @@ ELITE_JOURNAL_LOCATION = (
 )
 
 POLL_INTERVAL_MS = 250
-STATUS_STALE_SECONDS = 10.0
+# Treat Status.json as "Elite is no longer running" only after this many
+# seconds without an mtime bump. Elite does not heartbeat Status.json --
+# during idle play (e.g. sitting still in FSS), real updates can be 30+
+# seconds apart. A small window here causes false-positive flicker during
+# normal idle gameplay. 5 minutes is comfortably past Elite's actual write
+# cadence while still catching "Elite quit, file left behind" within a
+# reasonable window.
+STATUS_STALE_SECONDS = 300.0
 
 # Diagnostic: when True, every change to a managed state is logged at INFO
 # with the triggering Flags integer and the payload's timestamp. Use this
@@ -154,7 +167,6 @@ STATE_VALUE_RULES: dict[str, Callable[[dict], bool]] = {
 syslog = logging.getLogger("system")
 
 
-@SingletonDecorator
 class EliteDangerousStatusSync(QtCore.QObject):
     """Polls Status.json and writes flag bits into named GEX states."""
 
@@ -450,9 +462,18 @@ class EliteDangerousStatusSync(QtCore.QObject):
                 self._last_good_read_time is None
                 or now - self._last_good_read_time > STATUS_STALE_SECONDS
             ):
-                self._desired = {
+                cleared = {
                     name: False for name in self._all_state_names()
                 }
+                if DEBUG_LOG_STATE_CHANGES:
+                    for name, value in cleared.items():
+                        if self._desired.get(name) != value:
+                            syslog.info(
+                                f"ED state change: {name} "
+                                f"{self._desired.get(name)!r} -> {value!r}  "
+                                "(reason: stale clear)"
+                            )
+                self._desired = cleared
 
             self._assert_desired(force=self._force_next_assert)
             self._force_next_assert = False
@@ -461,6 +482,37 @@ class EliteDangerousStatusSync(QtCore.QObject):
             syslog.exception("ED status sync: poll iteration failed")
 
 
-# Module-level instance. SingletonDecorator guarantees that even if GEX
-# re-imports the module, only one real instance exists.
-instance = EliteDangerousStatusSync()
+# ---------------------------------------------------------------------------
+# Reload-safe registration.
+#
+# GEX re-executes the plugin module's top-level code on every profile
+# activation (and on some other UI events too). @SingletonDecorator only
+# guards against multiple instantiations *within a single module load*;
+# it does NOT protect against module reloads, because each reload creates
+# a fresh decorator instance wrapping a fresh class.
+#
+# Without this guard, every activation leaves behind a previous instance
+# still subscribed to EventListener signals, still running its QTimer,
+# still writing to the same GEX states. We have direct log evidence of
+# ~20 instances accumulating. Each one independently decides when the
+# file is stale, each one writes False at different moments, and the
+# states visibly flicker.
+#
+# The fix: store a sentinel on the EventListener, which IS a real
+# application-wide singleton. First load wins. Re-imports are no-ops.
+# Cost: editing this file while GEX is running has no effect until you
+# fully restart GEX. That is the correct tradeoff -- multiple live copies
+# of the plugin are strictly worse than one slightly stale copy.
+# ---------------------------------------------------------------------------
+_REGISTRY_ATTR = "_ed_status_sync_instance"
+
+_event_listener = gremlin.event_handler.EventListener()
+if getattr(_event_listener, _REGISTRY_ATTR, None) is not None:
+    syslog.info(
+        "ED status sync: already loaded in this GEX session; "
+        "skipping duplicate registration. Restart GEX to pick up plugin edits."
+    )
+else:
+    instance = EliteDangerousStatusSync()
+    setattr(_event_listener, _REGISTRY_ATTR, instance)
+    syslog.info("ED status sync: registered (first load)")

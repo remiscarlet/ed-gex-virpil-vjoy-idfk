@@ -25,11 +25,15 @@
 		<Deadzone Value="0.00000000" />
 	</YawAxisRaw>
 	<YawLeftButton>
-		<Primary Device="{NoDevice}" Key="" />
+		<Primary Device="Keyboard" Key="Key_Numpad_7">
+			<Modifier Device="Keyboard" Key="Key_LeftControl" />
+		</Primary>
 		<Secondary Device="{NoDevice}" Key="" />
 	</YawLeftButton>
 	<YawRightButton>
-		<Primary Device="{NoDevice}" Key="" />
+		<Primary Device="Keyboard" Key="Key_Numpad_9">
+			<Modifier Device="Keyboard" Key="Key_LeftControl" />
+		</Primary>
 		<Secondary Device="{NoDevice}" Key="" />
 	</YawRightButton>
 	<YawToRollMode Value="Bindings_YawIntoRollNone" />
@@ -46,11 +50,15 @@
 		<Deadzone Value="0.00000000" />
 	</RollAxisRaw>
 	<RollLeftButton>
-		<Primary Device="{NoDevice}" Key="" />
+		<Primary Device="Keyboard" Key="Key_Numpad_4">
+			<Modifier Device="Keyboard" Key="Key_LeftControl" />
+		</Primary>
 		<Secondary Device="{NoDevice}" Key="" />
 	</RollLeftButton>
 	<RollRightButton>
-		<Primary Device="{NoDevice}" Key="" />
+		<Primary Device="Keyboard" Key="Key_Numpad_6">
+			<Modifier Device="Keyboard" Key="Key_LeftControl" />
+		</Primary>
 		<Secondary Device="{NoDevice}" Key="" />
 	</RollRightButton>
 	<PitchAxisRaw>
@@ -59,11 +67,15 @@
 		<Deadzone Value="0.00000000" />
 	</PitchAxisRaw>
 	<PitchUpButton>
-		<Primary Device="{NoDevice}" Key="" />
+		<Primary Device="Keyboard" Key="Key_Numpad_8">
+			<Modifier Device="Keyboard" Key="Key_LeftControl" />
+		</Primary>
 		<Secondary Device="{NoDevice}" Key="" />
 	</PitchUpButton>
 	<PitchDownButton>
-		<Primary Device="{NoDevice}" Key="" />
+		<Primary Device="Keyboard" Key="Key_Numpad_5">
+			<Modifier Device="Keyboard" Key="Key_LeftControl" />
+		</Primary>
 		<Secondary Device="{NoDevice}" Key="" />
 	</PitchDownButton>
 	<LateralThrustRaw>
@@ -282,12 +294,14 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</UseBoostJuice>
 	<HyperSuperCombination>
-		<Primary Device="Keyboard" Key="Key_Numpad_Decimal" />
-		<Secondary Device="Keyboard" Key="Key_J" />
+		<Primary Device="{NoDevice}" Key="" />
+		<Secondary Device="Keyboard" Key="Key_Delete" />
 	</HyperSuperCombination>
 	<Supercruise>
 		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="Keyboard" Key="Key_Numpad_Divide" />
+		<Secondary Device="Keyboard" Key="Key_Numpad_Decimal">
+			<Modifier Device="Keyboard" Key="Key_LeftControl" />
+		</Secondary>
 	</Supercruise>
 	<Hyperspace>
 		<Primary Device="{NoDevice}" Key="" />
@@ -397,7 +411,7 @@
 	<DeployHardpointsOnFire Value="0" />
 	<ToggleButtonUpInput>
 		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="Keyboard" Key="Key_Delete" />
+		<Secondary Device="{NoDevice}" Key="" />
 		<ToggleOn Value="1" />
 	</ToggleButtonUpInput>
 	<DeployHeatSink>
