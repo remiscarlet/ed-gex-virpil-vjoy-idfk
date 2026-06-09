@@ -267,6 +267,18 @@
             </action-set>
           </container>
         </button>
+        <button id="19" description="?? Scroll Click">
+          <container container_id="74b801510c5e4fdfac4f886d5d00f3eb" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="4e72d93e379742469cd26a881566be30"/>
+            <action-set>
+              <vjoyremap vjoy="1" button="12" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="12" action_id="e0e1ef341da1487fb4c84e4147a0fc33" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </vjoyremap>
+            </action-set>
+          </container>
+        </button>
         <button id="28" description="??">
           <container container_id="215972813a8342c18ad9699f8aee6f14" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="ad67ab77da614f5b8d5c975013bb730f"/>
@@ -293,6 +305,18 @@
             </action-set>
           </container>
         </button>
+        <button id="21" description="?? Scroll Up">
+          <container container_id="cd3b32a5b1714e77a9436f86eab1ed0f" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="79f38992fb1a477db117a2676b59f65e"/>
+            <action-set>
+              <vjoyremap vjoy="1" button="13" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="13" action_id="e2a6c46f218e4c86a1495fe00b08255e" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </vjoyremap>
+            </action-set>
+          </container>
+        </button>
         <button id="30" description="Prev Fire Group">
           <container container_id="30ee5d97332440cfab6ea51ef8505cc0" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="a4d94a05125e4862b7dc4f1cd5463791"/>
@@ -304,6 +328,18 @@
                   <client client-name="Any" selected="True"/>
                 </remote-config>
               </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
+        <button id="22" description="?? Scroll Down">
+          <container container_id="63f42342abd5439dbe9d9a4958e99bf2" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="b92be7a926084391961da0ab29a088f1"/>
+            <action-set>
+              <vjoyremap vjoy="1" button="14" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="14" action_id="704140f6acaa49db918650eb3407df5b" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </vjoyremap>
             </action-set>
           </container>
         </button>
@@ -615,6 +651,20 @@
             </action-set>
           </container>
         </button>
+        <button id="9">
+          <container container_id="6b65ea021e424ebd8ccfdbc21354bccd" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="1b6ee0a25fe64c6ca5bbc4606267f4d7"/>
+            <action-set>
+              <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="17d8f268ad924adcb26edb946fbcb02b" priority="5">
+                <!--virtual: Left Control 0xa2/162 scan code: 0x1d/29 extended: False-->
+                <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
+                <!--virtual: F13 0x7c/124 scan code: 0x64/100 extended: False-->
+                <key virtual-code="124" scan-code="100" extended="False" description="F13"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
         <button id="7" description="Full Spectrum Scanner">
           <container container_id="f29e1432427349aca9944e5725da3677" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="2affdd4eac4b45a099a8932b02664d2c"/>
@@ -759,6 +809,20 @@
             </action-set>
           </container>
         </button>
+        <button id="17" description="Toggle Orbital Lines">
+          <container container_id="f839f914e72a4e8faeaf5d77bb2728fd" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="a068f5e017034be48627b7883777f516"/>
+            <action-set>
+              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="6f29534b26054ed2b53c07fdeeda2021" priority="5">
+                <!--virtual: = 0xbb/187 scan code: 0xd/13 extended: False-->
+                <key virtual-code="187" scan-code="13" extended="False" description="="/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
         <button id="20" description="Night Vision OFF">
           <container container_id="4f0b28954d37407c837231d82c38249a" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="3c608f3e401742ecb3271532706427d6"/>
@@ -769,6 +833,20 @@
                 <activation-condition rule="all" condition_id="260943416b8b4499848ada18b960bdc5">
                   <condition condition_id="582a54eb0f924c3d8fb95650a01583bd" delay="0.00000000" comparison="pressed" condition-type="state" key="is_night_vision_on" ignore-release="False"/>
                 </activation-condition>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
+        <button id="18" description="Toggle Rotational Correction">
+          <container container_id="3ca635dd34c54f35b3ab5e1dc25ba3cc" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="33f8773934074d8da505387a07c7d8d6"/>
+            <action-set>
+              <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="2b166bf320854d6e9dff69dae054674f" priority="5">
+                <!--virtual: F4 0x73/115 scan code: 0x3e/62 extended: False-->
+                <key virtual-code="115" scan-code="62" extended="False" description="F4"/>
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
                   <client client-name="Any" selected="True"/>
                 </remote-config>
@@ -849,7 +927,9 @@
                 <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
                 <!--virtual: Numpad 5 0x65/101 scan code: 0x4c/76 extended: False-->
                 <key virtual-code="101" scan-code="76" extended="False" description="Numpad 5"/>
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
               </map-to-keyboard-ex>
             </action-set>
           </container>
@@ -863,7 +943,9 @@
                 <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
                 <!--virtual: Numpad 8 0x68/104 scan code: 0x48/72 extended: False-->
                 <key virtual-code="104" scan-code="72" extended="False" description="Numpad 8"/>
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
               </map-to-keyboard-ex>
             </action-set>
           </container>
@@ -877,7 +959,9 @@
                 <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
                 <!--virtual: Numpad 4 0x64/100 scan code: 0x4b/75 extended: False-->
                 <key virtual-code="100" scan-code="75" extended="False" description="Numpad 4"/>
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
               </map-to-keyboard-ex>
             </action-set>
           </container>
@@ -886,12 +970,14 @@
           <container container_id="14a88c04718446ae9219f70068df9dde" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="ac254d29e99c4578a3dc792cccb7eb89"/>
             <action-set>
-              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="1b4ecb333961476c9e53e985afebb830" priority="5">
+              <map-to-keyboard-ex mode="pulse" delay="75" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="1b4ecb333961476c9e53e985afebb830" priority="5">
                 <!--virtual: Left Control 0xa2/162 scan code: 0x1d/29 extended: False-->
                 <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
                 <!--virtual: Numpad 6 0x66/102 scan code: 0x4d/77 extended: False-->
                 <key virtual-code="102" scan-code="77" extended="False" description="Numpad 6"/>
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
               </map-to-keyboard-ex>
             </action-set>
           </container>
@@ -905,7 +991,9 @@
                 <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
                 <!--virtual: Numpad 7 0x67/103 scan code: 0x47/71 extended: False-->
                 <key virtual-code="103" scan-code="71" extended="False" description="Numpad 7"/>
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
               </map-to-keyboard-ex>
             </action-set>
           </container>
@@ -919,7 +1007,9 @@
                 <key virtual-code="162" scan-code="29" extended="False" description="Left Control"/>
                 <!--virtual: Numpad 9 0x69/105 scan code: 0x49/73 extended: False-->
                 <key virtual-code="105" scan-code="73" extended="False" description="Numpad 9"/>
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
               </map-to-keyboard-ex>
             </action-set>
           </container>
@@ -1010,7 +1100,7 @@
                       </action_containers>
                     </gate>
                     <!--Range: [-0.98000,0.98000]  Gates: [0/1] Condition: [In Range] Mode: [Normal]-->
-                    <range delay="250" condition="in_range" mode="normal" id="bb1eefb0d22b4561bfb4cfd20408ab43" min_id="9547aa1d43824ce88864ac7b55e94cd0" max_id="c1db81083e054f1ab85e007276688c77"/>
+                    <range delay="250" condition="in_range" mode="normal" id="1d8b8a362c6b4a059096d3acf2e29946" min_id="9547aa1d43824ce88864ac7b55e94cd0" max_id="c1db81083e054f1ab85e007276688c77"/>
                     <filter value="True" ranged_value="True" value_in_range="True" value_out_of_range="True" gate_crossed="True" gate_decrease="True" gate_increase="True" fixed_value="True" range_enter="True" range_exit="True" range_hold="True"/>
                   </gate>
                 </gates>
@@ -1063,6 +1153,42 @@
             </action-set>
           </container>
         </axis>
+        <button id="2">
+          <container container_id="a6210d50ff1f4a1e8c889f764fb822ea" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="fc4a63f7b9e54b6eb9af769ebf25b425"/>
+            <action-set>
+              <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="438f32672d6f401ab1ed34f44688f8cf" priority="5">
+                <!--virtual: Numpad 0 0x60/96 scan code: 0x52/82 extended: False-->
+                <key virtual-code="96" scan-code="82" extended="False" description="Numpad 0"/>
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True"/>
+              </map-to-keyboard-ex>
+            </action-set>
+          </container>
+        </button>
+        <button id="1">
+          <container container_id="0dfc8cb01b3f4e4d966434b5f59bdeb5" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="100af87c55fa4520b834777dc728f4c3"/>
+            <action-set>
+              <vjoyremap vjoy="1" button="11" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="11" action_id="c7678c68e53d44be893c280047cd16b4" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </vjoyremap>
+            </action-set>
+          </container>
+        </button>
+        <button id="4" description="?? UI Panel Click">
+          <container container_id="4802466c42f74f2e8d17c10408c8d3c5" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="48c3e2f8b1b44583aca1562c3f406498"/>
+            <action-set>
+              <vjoyremap vjoy="1" button="19" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="19" action_id="26e86c04c0c3453ca223ccc75afa65fb" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </vjoyremap>
+            </action-set>
+          </container>
+        </button>
         <button id="11" description="Next Page/Tab">
           <container container_id="44dbdec958754bd3b3bbd2fafa4589e7" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="fd952e9bcbb34611bd24393b525753b6"/>
@@ -1115,6 +1241,18 @@
             </action-set>
           </container>
         </button>
+        <button id="10">
+          <container container_id="38a9c53187d64ba7ac5ccecd3b38bcb8" collapsed="False" type="basic">
+            <activation-condition rule="all" condition_id="6e34332127db4b5bb1c519cbcb8a8619"/>
+            <action-set>
+              <vjoyremap vjoy="1" button="4" mode="VJoyButton" exec_on_press="True" exec_on_release="False" sync-mode="0" auto_release="False" ignore-release="False" grid-visible="True" target_value="0.00000000" target_relative="False" relative_value="0.20000000" use_relative_value="False" relative_pulse_delay="100" start_pressed="False" paired="False" grid_visible="True" input="4" action_id="6430678720b447b09641955c3fb16588" priority="9">
+                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
+                  <client client-name="Any" selected="True"/>
+                </remote-config>
+              </vjoyremap>
+            </action-set>
+          </container>
+        </button>
         <button id="23" description="??">
           <container container_id="81590f513262427eb534c4ac9e58c62d" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="5b3aefc8ccb24fa6ba626921def97694"/>
@@ -1127,39 +1265,11 @@
             </action-set>
           </container>
         </button>
-        <button id="25" description="Orbital Lines">
-          <container container_id="c51df222d420410aa8f7554642d4f919" collapsed="False" type="basic">
-            <activation-condition rule="all" condition_id="e89db02908c1490cbdafc7f60d257928"/>
-            <action-set>
-              <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="9e6dea29f8fd486bb8e51317ce2bf717" priority="5">
-                <!--virtual: = 0xbb/187 scan code: 0xd/13 extended: False-->
-                <key virtual-code="187" scan-code="13" extended="False" description="="/>
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
-                  <client client-name="Any" selected="True"/>
-                </remote-config>
-              </map-to-keyboard-ex>
-            </action-set>
-          </container>
-        </button>
         <button id="26" description="??">
           <container container_id="42cbb3af7f3741c5b2c107e9f66165a0" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="35a84c9c8f2a4e8ca190033c1f91bd99"/>
             <action-set>
               <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="0410ef3d42de42079bf672f43503072d" priority="5">
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
-                  <client client-name="Any" selected="True"/>
-                </remote-config>
-              </map-to-keyboard-ex>
-            </action-set>
-          </container>
-        </button>
-        <button id="28" description="Rotational Correction">
-          <container container_id="ba822e4a568e4f859727a5c3e789aeb8" collapsed="False" type="basic">
-            <activation-condition rule="all" condition_id="93c1720402ec4ac4b780440a3c78c484"/>
-            <action-set>
-              <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="ef5f6197ebdd461ea93bc81e0fe16b56" priority="5">
-                <!--virtual: F4 0x73/115 scan code: 0x3e/62 extended: False-->
-                <key virtual-code="115" scan-code="62" extended="False" description="F4"/>
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
                   <client client-name="Any" selected="True"/>
                 </remote-config>
@@ -1294,27 +1404,18 @@
             </action-set>
           </container>
         </button>
-        <button id="38" description="Lights">
+        <button id="38">
           <container container_id="79b89a5d2f374642a2fdfe774eeeb272" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="e6b2755a8e0a4048a0b53c9d39328096"/>
-            <action-set>
-              <map-to-keyboard-ex mode="hold" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="4ec9ec8fe50a40678e790fbf016b4841" priority="5">
-                <!--virtual: Insert 0x2d/45 scan code: 0x52/82 extended: True-->
-                <key virtual-code="45" scan-code="82" extended="True" description="Insert"/>
-                <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
-                  <client client-name="Any" selected="True"/>
-                </remote-config>
-              </map-to-keyboard-ex>
-            </action-set>
           </container>
         </button>
-        <button id="40" description="Heatsink">
+        <button id="40" description="Toggle Camera Suite">
           <container container_id="36cd533074f44acb956f4959c1e55634" collapsed="False" type="basic">
             <activation-condition rule="all" condition_id="790f0e527f0149e19a77d28e3f4116a8"/>
             <action-set>
               <map-to-keyboard-ex mode="pulse" delay="50" interval="250" sync-mode="0" exec_on_press="True" exec_on_release="False" wheel-factor="1" action_id="3f9c13c944974bcd8b06ab074e07d6dd" priority="5">
-                <!--virtual: V 0x56/86 scan code: 0x2f/47 extended: False-->
-                <key virtual-code="86" scan-code="47" extended="False" description="V"/>
+                <!--virtual: F1 0x70/112 scan code: 0x3b/59 extended: False-->
+                <key virtual-code="112" scan-code="59" extended="False" description="F1"/>
                 <remote-config custom="False" local="True" remote="False" remote-profile="True" singleton="False" target-process="False" partial-title="True">
                   <client client-name="Any" selected="True"/>
                 </remote-config>

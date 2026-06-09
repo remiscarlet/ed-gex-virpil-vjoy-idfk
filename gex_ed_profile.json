@@ -6,16 +6,16 @@
             1
         ],
         "00004f5006df11f1800e444553540000": [
-            2,
-            2
+            3,
+            28
         ],
         "576a611058f411f18001444553540000": [
             3,
-            36
+            9
         ],
         "702d2f9006db11f18009444553540000": [
-            2,
-            2
+            3,
+            4
         ],
         "72bbc0f431a84a41b528868dc7fcedfa": [
             11,
@@ -42,11 +42,11 @@
             null
         ]
     },
-    "last_input_id": 36,
+    "last_input_id": 9,
     "last_input_type": "button",
     "selection_map": {
         "device_guid": {
-            "input_id": 36,
+            "input_id": 9,
             "input_type": "button"
         }
     }
