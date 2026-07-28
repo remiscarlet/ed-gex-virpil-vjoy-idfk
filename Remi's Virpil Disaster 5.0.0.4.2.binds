@@ -286,7 +286,7 @@
 	</BackwardThrustButton_Landing>
 	<ToggleFlightAssist>
 		<Primary Device="Keyboard" Key="Key_Z" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="Keyboard" Key="Key_Numpad_Divide" />
 		<ToggleOn Value="1" />
 	</ToggleFlightAssist>
 	<UseBoostJuice>
@@ -504,15 +504,11 @@
 	<MouseGUI Value="1" />
 	<WeaponColourToggle>
 		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="Keyboard" Key="Key_1">
-			<Modifier Device="Keyboard" Key="Key_LeftAlt" />
-		</Secondary>
+		<Secondary Device="Keyboard" Key="Key_F11" />
 	</WeaponColourToggle>
 	<EngineColourToggle>
 		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="Keyboard" Key="Key_2">
-			<Modifier Device="Keyboard" Key="Key_LeftAlt" />
-		</Secondary>
+		<Secondary Device="Keyboard" Key="Key_F12" />
 	</EngineColourToggle>
 	<NightVisionToggle>
 		<Primary Device="{NoDevice}" Key="" />
@@ -523,7 +519,7 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</TriggerColonisationModule>
 	<UIFocus>
-		<Primary Device="{NoDevice}" Key="" />
+		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_19" />
 		<Secondary Device="Keyboard" Key="Key_LeftShift" />
 	</UIFocus>
 	<UIFocusMode Value="Bindings_FocusModeHold" />
@@ -607,51 +603,51 @@
 	</ExplorationFSSEnter>
 	<UI_Up>
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_15" />
-		<Secondary Device="Keyboard" Key="Key_W" />
+		<Secondary Device="vJoy" DeviceIndex="2" Key="Joy_POV1Up" />
 	</UI_Up>
 	<UI_Down>
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_17" />
-		<Secondary Device="Keyboard" Key="Key_S" />
+		<Secondary Device="vJoy" DeviceIndex="2" Key="Joy_POV1Down" />
 	</UI_Down>
 	<UI_Left>
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_18" />
-		<Secondary Device="Keyboard" Key="Key_A" />
+		<Secondary Device="vJoy" DeviceIndex="2" Key="Joy_POV1Left" />
 	</UI_Left>
 	<UI_Right>
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_16" />
-		<Secondary Device="Keyboard" Key="Key_D" />
+		<Secondary Device="vJoy" DeviceIndex="2" Key="Joy_POV1Right" />
 	</UI_Right>
 	<UI_Select>
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_1" />
-		<Secondary Device="Keyboard" Key="Key_Space" />
+		<Secondary Device="vJoy" DeviceIndex="2" Key="Joy_1" />
 	</UI_Select>
 	<UI_Back>
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_2" />
-		<Secondary Device="Keyboard" Key="Key_Backspace" />
+		<Secondary Device="vJoy" DeviceIndex="2" Key="Joy_2" />
 	</UI_Back>
 	<UI_Toggle>
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_9" />
-		<Secondary Device="Keyboard" Key="Key_Numpad_Add" />
+		<Secondary Device="vJoy" DeviceIndex="2" Key="Joy_8" />
 	</UI_Toggle>
 	<CycleNextPanel>
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_5" />
-		<Secondary Device="Keyboard" Key="Key_E" />
+		<Secondary Device="vJoy" DeviceIndex="2" Key="Joy_6" />
 	</CycleNextPanel>
 	<CyclePreviousPanel>
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_6" />
-		<Secondary Device="Keyboard" Key="Key_Q" />
+		<Secondary Device="vJoy" DeviceIndex="2" Key="Joy_5" />
 	</CyclePreviousPanel>
 	<CycleNextPage>
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_5">
 			<Modifier Device="vJoy" DeviceIndex="0" Key="Joy_16" />
 		</Primary>
-		<Secondary Device="Keyboard" Key="Key_C" />
+		<Secondary Device="vJoy" DeviceIndex="2" Key="Pos_Joy_RZAxis" />
 	</CycleNextPage>
 	<CyclePreviousPage>
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_6">
 			<Modifier Device="vJoy" DeviceIndex="0" Key="Joy_16" />
 		</Primary>
-		<Secondary Device="Keyboard" Key="Key_Z" />
+		<Secondary Device="vJoy" DeviceIndex="2" Key="Pos_Joy_ZAxis" />
 	</CyclePreviousPage>
 	<MouseHeadlook Value="1" />
 	<MouseHeadlookInvert Value="0" />
@@ -720,13 +716,13 @@
 		<Deadzone Value="0.00000000" />
 	</CamYawAxis>
 	<CamYawLeft>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_23" />
+		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_27" />
 		<Secondary Device="Keyboard" Key="Key_Q">
 			<Modifier Device="Keyboard" Key="Key_LeftControl" />
 		</Secondary>
 	</CamYawLeft>
 	<CamYawRight>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_25" />
+		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_29" />
 		<Secondary Device="Keyboard" Key="Key_E">
 			<Modifier Device="Keyboard" Key="Key_LeftControl" />
 		</Secondary>
@@ -754,13 +750,13 @@
 		<Deadzone Value="0.00000000" />
 	</CamTranslateXAxis>
 	<CamTranslateLeft>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_27" />
+		<Primary Device="{NoDevice}" Key="" />
 		<Secondary Device="Keyboard" Key="Key_A">
 			<Modifier Device="Keyboard" Key="Key_LeftControl" />
 		</Secondary>
 	</CamTranslateLeft>
 	<CamTranslateRight>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_29" />
+		<Primary Device="{NoDevice}" Key="" />
 		<Secondary Device="Keyboard" Key="Key_D">
 			<Modifier Device="Keyboard" Key="Key_LeftControl" />
 		</Secondary>
@@ -835,7 +831,7 @@
 	</SteerRightButton>
 	<BuggyRollAxisRaw>
 		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_ZAxis" />
-		<Inverted Value="0" />
+		<Inverted Value="1" />
 		<Deadzone Value="0.00000000" />
 	</BuggyRollAxisRaw>
 	<BuggyRollLeftButton>
@@ -1619,8 +1615,8 @@
 	<MouseHumanoidYMode Value="Bindings_MousePitch" />
 	<MouseHumanoidSensitivity Value="4.98000002" />
 	<HumanoidForwardAxis>
-		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_RYAxis" />
-		<Inverted Value="0" />
+		<Binding Device="vJoy" DeviceIndex="2" Key="Joy_ZAxis" />
+		<Inverted Value="1" />
 		<Deadzone Value="0.00000000" />
 	</HumanoidForwardAxis>
 	<HumanoidForwardButton>
@@ -1632,7 +1628,7 @@
 		<Secondary Device="Keyboard" Key="Key_S" />
 	</HumanoidBackwardButton>
 	<HumanoidStrafeAxis>
-		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_RXAxis" />
+		<Binding Device="vJoy" DeviceIndex="2" Key="Joy_YAxis" />
 		<Inverted Value="0" />
 		<Deadzone Value="0.00000000" />
 	</HumanoidStrafeAxis>
@@ -1645,7 +1641,7 @@
 		<Secondary Device="Keyboard" Key="Key_D" />
 	</HumanoidStrafeRightButton>
 	<HumanoidRotateAxis>
-		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_XAxis" />
+		<Binding Device="vJoy" DeviceIndex="2" Key="Joy_RYAxis" />
 		<Inverted Value="0" />
 		<Deadzone Value="0.00000000" />
 	</HumanoidRotateAxis>
@@ -1659,8 +1655,8 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</HumanoidRotateRightButton>
 	<HumanoidPitchAxis>
-		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_YAxis" />
-		<Inverted Value="0" />
+		<Binding Device="vJoy" DeviceIndex="2" Key="Joy_RZAxis" />
+		<Inverted Value="1" />
 		<Deadzone Value="0.00000000" />
 	</HumanoidPitchAxis>
 	<HumanoidPitchSensitivity Value="1.52389610" />
@@ -1673,11 +1669,9 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</HumanoidPitchDownButton>
 	<HumanoidSprintButton>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_24">
-			<Hold Value="1" />
-		</Primary>
+		<Primary Device="vJoy" DeviceIndex="2" Key="Joy_9" />
 		<Secondary Device="Keyboard" Key="Key_LeftShift" />
-		<ToggleOn Value="0" />
+		<ToggleOn Value="1" />
 	</HumanoidSprintButton>
 	<HumanoidWalkButton>
 		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_9">
@@ -1692,13 +1686,11 @@
 		<ToggleOn Value="1" />
 	</HumanoidCrouchButton>
 	<HumanoidJumpButton>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_15" />
+		<Primary Device="vJoy" DeviceIndex="2" Key="Joy_1" />
 		<Secondary Device="Keyboard" Key="Key_Space" />
 	</HumanoidJumpButton>
 	<HumanoidPrimaryInteractButton>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_8">
-			<Hold Value="1" />
-		</Primary>
+		<Primary Device="vJoy" DeviceIndex="2" Key="Joy_3" />
 		<Secondary Device="Keyboard" Key="Key_F" />
 	</HumanoidPrimaryInteractButton>
 	<HumanoidSecondaryInteractButton>
@@ -1708,7 +1700,7 @@
 		<Secondary Device="Keyboard" Key="Key_G" />
 	</HumanoidSecondaryInteractButton>
 	<HumanoidItemWheelButton>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_7" />
+		<Primary Device="vJoy" DeviceIndex="2" Key="Joy_POV1Left" />
 		<Secondary Device="Keyboard" Key="Key_Tab" />
 		<ToggleOn Value="0" />
 	</HumanoidItemWheelButton>
@@ -1722,7 +1714,7 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</HumanoidUtilityWheelCycleMode>
 	<HumanoidItemWheelButton_XAxis>
-		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_RXAxis" />
+		<Binding Device="vJoy" DeviceIndex="2" Key="Joy_RYAxis" />
 		<Inverted Value="0" />
 		<Deadzone Value="0.00000000" />
 	</HumanoidItemWheelButton_XAxis>
@@ -1735,8 +1727,8 @@
 		<Secondary Device="Keyboard" Key="Key_D" />
 	</HumanoidItemWheelButton_XRight>
 	<HumanoidItemWheelButton_YAxis>
-		<Binding Device="vJoy" DeviceIndex="1" Key="Joy_RYAxis" />
-		<Inverted Value="0" />
+		<Binding Device="vJoy" DeviceIndex="2" Key="Joy_RZAxis" />
+		<Inverted Value="1" />
 		<Deadzone Value="0.00000000" />
 	</HumanoidItemWheelButton_YAxis>
 	<HumanoidItemWheelButton_YUp>
@@ -1749,32 +1741,28 @@
 	</HumanoidItemWheelButton_YDown>
 	<HumanoidItemWheel_AcceptMouseInput Value="1" />
 	<HumanoidPrimaryFireButton>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_1" />
+		<Primary Device="vJoy" DeviceIndex="2" Key="Pos_Joy_UAxis" />
 		<Secondary Device="Mouse" Key="Mouse_1" />
 	</HumanoidPrimaryFireButton>
 	<HumanoidZoomButton>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_4" />
+		<Primary Device="vJoy" DeviceIndex="2" Key="Pos_Joy_RXAxis" />
 		<Secondary Device="Mouse" Key="Mouse_2" />
 		<ToggleOn Value="0" />
 	</HumanoidZoomButton>
 	<HumanoidThrowGrenadeButton>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_3">
-			<Modifier Device="vJoy" DeviceIndex="1" Key="Joy_1" />
-		</Primary>
+		<Primary Device="vJoy" DeviceIndex="2" Key="Joy_6" />
 		<Secondary Device="Mouse" Key="Mouse_3" />
 	</HumanoidThrowGrenadeButton>
 	<HumanoidMeleeButton>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_24" />
+		<Primary Device="vJoy" DeviceIndex="2" Key="Joy_10" />
 		<Secondary Device="Keyboard" Key="Key_E" />
 	</HumanoidMeleeButton>
 	<HumanoidReloadButton>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_22">
-			<Hold Value="1" />
-		</Primary>
+		<Primary Device="vJoy" DeviceIndex="2" Key="Joy_2" />
 		<Secondary Device="Keyboard" Key="Key_R" />
 	</HumanoidReloadButton>
 	<HumanoidSwitchWeapon>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_23" />
+		<Primary Device="vJoy" DeviceIndex="2" Key="Joy_4" />
 		<Secondary Device="{NoDevice}" Key="" />
 	</HumanoidSwitchWeapon>
 	<HumanoidSelectPrimaryWeaponButton>
@@ -1786,7 +1774,7 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</HumanoidSelectSecondaryWeaponButton>
 	<HumanoidSelectUtilityWeaponButton>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_25" />
+		<Primary Device="vJoy" DeviceIndex="2" Key="Joy_POV1Up" />
 		<Secondary Device="{NoDevice}" Key="" />
 	</HumanoidSelectUtilityWeaponButton>
 	<HumanoidSelectNextWeaponButton>
@@ -1798,7 +1786,7 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</HumanoidSelectPreviousWeaponButton>
 	<HumanoidHideWeaponButton>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_9" />
+		<Primary Device="{NoDevice}" Key="" />
 		<Secondary Device="{NoDevice}" Key="" />
 	</HumanoidHideWeaponButton>
 	<HumanoidSelectNextGrenadeTypeButton>
@@ -1810,19 +1798,17 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</HumanoidSelectPreviousGrenadeTypeButton>
 	<HumanoidToggleFlashlightButton>
-		<Primary Device="Keyboard" Key="Key_LeftShift">
-			<Modifier Device="Keyboard" Key="Key_3" />
-		</Primary>
+		<Primary Device="vJoy" DeviceIndex="2" Key="Joy_POV1Left" />
 		<Secondary Device="Keyboard" Key="Key_Q" />
 	</HumanoidToggleFlashlightButton>
 	<HumanoidToggleNightVisionButton>
-		<Primary Device="{NoDevice}" Key="" />
+		<Primary Device="vJoy" DeviceIndex="2" Key="Joy_POV1Left">
+			<Modifier Device="vJoy" DeviceIndex="2" Key="Joy_5" />
+		</Primary>
 		<Secondary Device="Keyboard" Key="Key_Slash" />
 	</HumanoidToggleNightVisionButton>
 	<HumanoidToggleShieldsButton>
-		<Primary Device="vJoy" DeviceIndex="1" Key="Joy_23">
-			<Hold Value="1" />
-		</Primary>
+		<Primary Device="vJoy" DeviceIndex="2" Key="Joy_POV1Down" />
 		<Secondary Device="{NoDevice}" Key="" />
 	</HumanoidToggleShieldsButton>
 	<HumanoidClearAuthorityLevel>
@@ -1830,11 +1816,15 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</HumanoidClearAuthorityLevel>
 	<HumanoidHealthPack>
-		<Primary Device="{NoDevice}" Key="" />
+		<Primary Device="vJoy" DeviceIndex="2" Key="Joy_POV1Right">
+			<Modifier Device="vJoy" DeviceIndex="2" Key="Joy_5" />
+		</Primary>
 		<Secondary Device="{NoDevice}" Key="" />
 	</HumanoidHealthPack>
 	<HumanoidBattery>
-		<Primary Device="{NoDevice}" Key="" />
+		<Primary Device="vJoy" DeviceIndex="2" Key="Joy_POV1Down">
+			<Modifier Device="vJoy" DeviceIndex="2" Key="Joy_5" />
+		</Primary>
 		<Secondary Device="{NoDevice}" Key="" />
 	</HumanoidBattery>
 	<HumanoidSelectFragGrenade>
@@ -1858,7 +1848,9 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</HumanoidSwitchToCompAnalyser>
 	<HumanoidSwitchToSuitTool>
-		<Primary Device="{NoDevice}" Key="" />
+		<Primary Device="vJoy" DeviceIndex="2" Key="Joy_POV1Up">
+			<Modifier Device="vJoy" DeviceIndex="2" Key="Joy_5" />
+		</Primary>
 		<Secondary Device="{NoDevice}" Key="" />
 	</HumanoidSwitchToSuitTool>
 	<HumanoidToggleToolModeButton>
